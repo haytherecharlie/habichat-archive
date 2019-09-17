@@ -1,7 +1,17 @@
 {
   "home": {
-    "title": "",
-    "description": "",
-    "robots": ""
+    "title": "Habichat | Connect With Your Neighbours.",
+    "description": "Looking for the best way to connect with your neighbors? Habichat is the #1 app for meeting the people who live next door. Download Habichat today on iOS and Android.",
+    "robots": "User-agent: *"
+  },
+  "terms": {
+    "title": "Habichat | Terms of Service",
+    "description": "Terms of Service for Habichat on iOS, Android and Web. Download Habichat today on iOS App Store and Google Play.",
+    "robots": "User-agent: *"
+  },
+  "privacy": {
+    "title": "Habichat | Terms of Service",
+    "description": "Privacy Policy for Habichat on iOS, Android and Web. Download Habichat today on iOS App Store and Google Play.",
+    "robots": "User-agent: *"
   }
 }

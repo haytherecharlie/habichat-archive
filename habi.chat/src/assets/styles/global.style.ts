@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle({
   '@font-face': {
     fontFamily: 'habichat',
-    src: `url('../fonts/habichat.otf')`
+    src: `url(${require('../fonts/habichat.otf')})`
   },
   '*, *::before, *::after': {
     boxSizing: 'border-box'
