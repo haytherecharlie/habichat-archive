@@ -25,6 +25,7 @@
     "build": "react-scripts build",
     "deploy": "firebase deploy --only hosting",
     "dev": "react-scripts start",
+    "serve": "npx serve -s build",
     "test": "react-scripts test"
   },
   "eslintConfig": {
