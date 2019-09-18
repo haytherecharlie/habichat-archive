@@ -10,7 +10,7 @@ export const Home = styled('div')({
 })
 
 export const Splash = styled('div')({
-  height: '100vh',
+  height: '90vh',
   width: '100%',
   background: `url(${cityscape}) no-repeat 50% 20%`,
   backgroundSize: 'cover',
@@ -41,9 +41,10 @@ export const Content = styled('div')({
 })
 
 export const Title = styled('p')({
+  marginTop: '3rem',
   fontSize: 40,
   color: '#191d38',
-  fontWeight: 300,
+  fontWeight: 500,
   textAlign: 'center',
   '@media only screen and (max-width: 600px)': {
     fontSize: 30,
@@ -53,7 +54,7 @@ export const Title = styled('p')({
 
 export const Paragraph = styled('p')({
   color: '#191d38',
-  fontWeight: 100,
+  fontWeight: 400,
   textAlign: 'center',
   maxWidth: 500,
   marginBottom: '5rem',
@@ -65,7 +66,7 @@ export const Paragraph = styled('p')({
 })
 
 export const Strong = styled('strong')({
-  fontWeight: 400
+  fontWeight: 700
 })
 
 export const PromoImage = styled('img')({
@@ -79,7 +80,7 @@ export const List = styled('ul')({
 })
 
 export const Item = styled('li')({
-  fontWeight: 100,
+  fontWeight: 400,
   '@media only screen and (max-width: 600px)': {
     fontSize: 17,
     width: 250
