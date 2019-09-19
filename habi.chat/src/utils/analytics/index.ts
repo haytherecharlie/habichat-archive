@@ -7,7 +7,7 @@ const pushToDataLayer = (name: string, value: string) => {
 export const initDataLayer = () => {
   window.dataLayer = window.dataLayer || []
   pushToDataLayer('js', `${new Date()}`)
-  pushToDataLayer('config', 'G-8TLD4RLYZT')
+  pushToDataLayer('config', 'G-K7R9XDFG9J')
 }
 
 export const recordPageView = (id: string) => {
