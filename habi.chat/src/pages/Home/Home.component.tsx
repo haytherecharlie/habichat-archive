@@ -1,7 +1,7 @@
 import React from 'react'
 import { home } from 'config/analytics.json'
 import logoOutline from 'assets/images/habichat-icon-outline.png'
-// import { recordPageView } from 'utils/analytics'
+import { recordPageView } from 'utils/analytics'
 import Subscribe from 'components/Subscribe'
 import Helmet from 'components/Helmet'
 import ScrollDown from 'components/ScrollDown'
@@ -10,7 +10,7 @@ import promo from 'assets/images/promo.jpg'
 import * as S from './Home.style'
 
 const HomePage = () => {
-  // recordPageView('Home')
+  recordPageView('/')
   return (
     <S.Home>
       <Helmet seo={home} />
@@ -22,8 +22,8 @@ const HomePage = () => {
         <S.Title>Welcome to the Community</S.Title>
         <S.Paragraph>
           There is so much going on in our neighbourhood - <S.Strong>Habichat</S.Strong> makes it
-          easy to connect, share and stay informed about everything happening at Habour View
-          Estates.
+          easy to connect, share and stay informed about everything happening at <S.Strong>Harbour View
+          Estates.</S.Strong>
         </S.Paragraph>
         <S.PromoImage src={promo} />
         <S.List>

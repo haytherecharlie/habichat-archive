@@ -1,9 +1,11 @@
+declare const window: any;
+
 const pushToDataLayer = (name: string, value: string) => {
-  (window as any).dataLayer.push(name, value)
+  window.dataLayer.push(name, value)
 }
 
 export const initDataLayer = () => {
-  (window as any).dataLayer = (window as any).dataLayer || []
+  window.dataLayer = window.dataLayer || []
   pushToDataLayer('js', `${new Date()}`)
   pushToDataLayer('config', 'G-8TLD4RLYZT')
 }
