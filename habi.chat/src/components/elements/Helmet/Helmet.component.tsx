@@ -1,15 +1,8 @@
 import React from 'react'
 import { Helmet as Head } from 'react-helmet'
+import { HelmetProps } from 'interfaces'
 
-interface Props {
-  seo: {
-    title: string
-    description: string
-    robots: string
-  }
-}
-
-const Helmet = ({ seo }: Props) => (
+const Helmet = ({ seo }: HelmetProps) => (
   <Head>
     <title>{seo.title}</title>
     <meta name="description" content={seo.description} />

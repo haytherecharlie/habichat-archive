@@ -1,7 +1,7 @@
 import React from 'react'
 import { privacy } from 'config/analytics.json'
 import { recordPageView } from 'utils/analytics'
-import Helmet from 'components/Helmet'
+import Helmet from 'components/elements/Helmet'
 import * as S from './PrivacyPolicy.style'
 
 const PrivacyPolicy = () => {

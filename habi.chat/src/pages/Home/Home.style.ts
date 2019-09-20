@@ -37,7 +37,7 @@ export const Content = styled('div')({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '1rem'
+  padding: '0 1rem'
 })
 
 export const Title = styled('p')({

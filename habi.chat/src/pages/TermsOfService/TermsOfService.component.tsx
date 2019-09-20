@@ -1,6 +1,6 @@
 import React from 'react'
 import { terms } from 'config/analytics.json'
-import Helmet from 'components/Helmet'
+import Helmet from 'components/elements/Helmet'
 import { recordPageView } from 'utils/analytics'
 import * as S from './TermsOfService.style'
 
