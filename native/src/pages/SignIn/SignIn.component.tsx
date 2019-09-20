@@ -1,9 +1,7 @@
 import React from 'react'
 import * as S from './SignIn.style'
 
-interface SignInProps {}
-
-const SignIn = ({  }: SignInProps) => {
+const SignIn = () => {
   return (
     <S.SignIn>
       <S.Title>Sign In</S.Title>
