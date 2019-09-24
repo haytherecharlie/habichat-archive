@@ -1,4 +1,5 @@
 import React from 'react'
+import emojize from 'src/utils/emojize'
 import * as S from './Profile.style'
 
 interface Props {
@@ -10,7 +11,7 @@ const Profile = ({ nickName, icon }: Props) => {
   return (
     <S.Profile>
       <S.NickName>{nickName}</S.NickName>
-      <S.Icon>{icon}</S.Icon>
+      <S.Icon source={{ uri: emojize(icon) }} />
     </S.Profile>
   )
 }
