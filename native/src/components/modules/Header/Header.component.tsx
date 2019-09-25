@@ -1,23 +1,34 @@
 import React from 'react'
+import { Keyboard } from 'react-native'
 import { withNavigation } from 'react-navigation'
-import PostButton from 'src/components/elements/PostButton'
 import * as S from './Header.style'
 
-const Header = ({ navigation }) => {
+const Header = ({ navigation, postText, saveNewPost, typeNewPost }) => {
+  const postMessage = () => {
+    if (postText.text !== '') {
+      saveNewPost(postText)
+      typeNewPost('')
+      Keyboard.dismiss()
+      return navigation.navigate('Community')
+    }
+  }
+
   return (
-    <S.Header>
+    <S.Wrapper>
       <S.Col float="flex-start">
-        <S.Button onPress={() => navigation.navigate('Profile')}>
-          <S.Chevron>&lsaquo;</S.Chevron>
-        </S.Button>
+        <S.BackButton onPress={() => navigation.navigate('Profile')}>
+          <S.BackButtonText>&lsaquo;</S.BackButtonText>
+        </S.BackButton>
       </S.Col>
       <S.Col>
-        <S.Headline weight={700}>New Post</S.Headline>
+        <S.HeaderTitle>Compose</S.HeaderTitle>
       </S.Col>
-      <S.Col float="flex-end">
-        <PostButton />
+      <S.Col>
+        <S.PostButton onPress={postMessage}>
+          <S.PostButtonTitle>Post</S.PostButtonTitle>
+        </S.PostButton>
       </S.Col>
-    </S.Header>
+    </S.Wrapper>
   )
 }
 

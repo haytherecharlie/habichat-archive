@@ -3,9 +3,8 @@ import { typeNewPost } from 'src/services/redux/actions'
 import { connect } from 'react-redux'
 
 const state = (state) => {
-  const value = state.post.text
   return {
-    value
+    value: state.post.text
   }
 }
 

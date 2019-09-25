@@ -1,9 +1,9 @@
 import scale from 'src/utils/scale'
 
 /* TEXT */
-export const HEADLINE = scale(18)
-export const BODY = scale(14)
-export const SUBTEXT = scale(12)
+export const LARGE = scale(18)
+export const MEDIUM = scale(14)
+export const SMALL = scale(12)
 
 /* CHEVRON */
 export const CHEVRON = scale(30)
@@ -13,6 +13,7 @@ export const BACKGROUND = '#F8F8F8'
 export const WHITE = '#FFFFFF'
 export const CHARCOAL = '#222222'
 export const BLUE = '#191D38'
+export const LIGHTBLUE = '#22285A'
 
 /* FONT */
 export const HABICHAT = 'habichat'

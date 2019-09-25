@@ -1,31 +1,53 @@
 import styled from 'styled-components'
-import { BLUE, HEADLINE } from 'src/constants'
-export { default as Headline } from 'src/components/elements/Headline'
-export { default as Chevron } from 'src/components/elements/Chevron'
+import { BLUE, LARGE, LIGHTBLUE, BACKGROUND } from 'src/constants'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-export const Header = styled(View)({
+export const Wrapper = styled(View)({
   flex: `0 0 50px`,
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'stretch',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  backgroundColor: BACKGROUND
 })
 
 export const Col = styled(View)({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  alignItems: (p) => p.float || 'center',
+  alignItems: 'stretch',
   justifyContent: 'center'
 })
 
-export const Button = styled(TouchableOpacity)({})
-
-export const Chevron = styled(Text)({
-  fontSize: 40,
-  lineHeight: 40,
-  color: BLUE,
-  fontWeight: 400
+export const BackButton = styled(TouchableOpacity)({
+  flex: 1,
+  display: 'flex',
+  alignItems: 'stretch',
+  justifyContent: 'center'
 })
 
+export const BackButtonText = styled(Text)({
+  color: BLUE,
+  fontSize: 30
+})
+
+export const HeaderTitle = styled(Text)({
+  color: BLUE,
+  fontSize: 20,
+  fontWeight: 700,
+  textAlign: 'center'
+})
+
+export const PostButton = styled(TouchableOpacity)({
+  flex: 1,
+  display: 'flex',
+  alignItems: 'stretch',
+  justifyContent: 'center'
+})
+
+export const PostButtonTitle = styled(Text)({
+  color: LIGHTBLUE,
+  fontSize: 20,
+  fontWeight: 400,
+  textAlign: 'right'
+})

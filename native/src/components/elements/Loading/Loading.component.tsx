@@ -4,9 +4,9 @@ import * as S from './Loading.style'
 
 const Loading = () => {
   return (
-    <S.Loading>
+    <S.Wrapper>
       <S.Spinner source={loading} />
-    </S.Loading>
+    </S.Wrapper>
   )
 }
 

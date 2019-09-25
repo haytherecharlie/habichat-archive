@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { saveNewPost, typeNewPost } from 'src/services/redux/actions'
-import PostButton from './PostButton.component'
+import Header from './Header.component'
 
 export const state = (state) => {
   const author = { name: state.user.nickName, timestamp: new Date().getTime() }
@@ -18,4 +18,4 @@ export const dispatch = {
 export default connect(
   state,
   dispatch
-)(PostButton)
+)(Header)
