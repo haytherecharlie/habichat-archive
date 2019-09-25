@@ -12,7 +12,7 @@ const Header = ({ navigation }) => {
         </S.Button>
       </S.Col>
       <S.Col>
-        <S.Title weight={700}>New Post</S.Title>
+        <S.Headline weight={700}>New Post</S.Headline>
       </S.Col>
       <S.Col float="flex-end">
         <PostButton />

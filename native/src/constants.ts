@@ -5,6 +5,9 @@ export const HEADLINE = scale(18)
 export const BODY = scale(14)
 export const SUBTEXT = scale(12)
 
+/* CHEVRON */
+export const CHEVRON = scale(30)
+
 /* COLORS */
 export const BACKGROUND = '#F8F8F8'
 export const WHITE = '#FFFFFF'

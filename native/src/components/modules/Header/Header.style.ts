@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { BLUE, HEADLINE } from 'src/constants'
+export { default as Headline } from 'src/components/elements/Headline'
+export { default as Chevron } from 'src/components/elements/Chevron'
 import { View, Text, TouchableOpacity } from 'react-native'
 
 export const Header = styled(View)({
@@ -27,9 +29,3 @@ export const Chevron = styled(Text)({
   fontWeight: 400
 })
 
-export const Title = styled(Text)({
-  fontSize: HEADLINE,
-  lineHeight: HEADLINE,
-  color: BLUE,
-  fontWeight: (p) => p.weight
-})
