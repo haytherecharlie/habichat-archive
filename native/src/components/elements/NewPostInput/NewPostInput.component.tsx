@@ -2,10 +2,11 @@ import React, { useRef } from 'react'
 import * as S from './NewPostInput.style'
 
 interface Props {
-  typeNewPost: func
+  typeNewPost: func,
+  value: string
 }
 
-const NewPostInput = ({typeNewPost}: Props) => {
+const NewPostInput = ({ value, typeNewPost }: Props) => {
   return (
     <S.Border>
       <S.Input
@@ -30,6 +31,7 @@ const NewPostInput = ({typeNewPost}: Props) => {
         numberOfLines={10}
         onChangeText={(t) => typeNewPost(t)}
         placeholder="Say Something.."
+        value={value}
       />
     </S.Border>
   )

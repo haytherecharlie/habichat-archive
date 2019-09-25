@@ -14,7 +14,7 @@ export const Col = styled(View)({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  alignItems: (p) => p.float,
+  alignItems: (p) => p.float || 'center',
   justifyContent: 'center'
 })
 

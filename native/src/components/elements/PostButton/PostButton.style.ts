@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { View, Text } from 'react-native'
+import { TouchableOpacity, Text } from 'react-native'
 
-export const SignIn = styled(View)({
+export const PostButton = styled(TouchableOpacity)({
   flex: 1,
   display: 'flex',
   alignItems: 'center',
