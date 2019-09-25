@@ -1,3 +1,3 @@
-import Router from './Router.component'
+import Router from './Router.container'
 
 export default Router

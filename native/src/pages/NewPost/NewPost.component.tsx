@@ -1,10 +1,12 @@
 import React from 'react'
+import Header from 'src/components/elements/Header'
 import NewPostInput from 'src/components/elements/NewPostInput'
 import * as S from './NewPost.style'
 
 const NewPost = () => {
   return (
     <S.NewPost>
+      <Header />
       <NewPostInput />
     </S.NewPost>
   )

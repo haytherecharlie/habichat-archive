@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import devToolsEnhancer from 'remote-redux-devtools'
+// import devToolsEnhancer from 'remote-redux-devtools'
 import rootReducer from 'src/services/redux/reducers'
 
-export default createStore(rootReducer, devToolsEnhancer())
+export default createStore(rootReducer)

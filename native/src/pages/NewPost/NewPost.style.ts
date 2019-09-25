@@ -1,13 +1,14 @@
 import styled from 'styled-components'
-import { BLUE } from 'src/constants'
+import { BLUE, BACKGROUND, PADDING } from 'src/constants'
 import { KeyboardAvoidingView, TextInput } from 'react-native'
 
 export const NewPost = styled(KeyboardAvoidingView)({
   flex: 1,
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: '#F8F8F8'
+  alignItems: 'stretch',
+  justifyContent: 'flex-start',
+  backgroundColor: BACKGROUND,
+  padding: PADDING
 })
 
 export const Title = styled(TextInput)({

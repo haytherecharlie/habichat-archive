@@ -4,7 +4,7 @@ const defaultState = {
   firstName: 'Charlie',
   lastName: 'Hay',
   nickName: 'Haytrix',
-  icon: `😘`,
+  icon: `🦧`,
   email: 'charlie.hay@outlook.com',
   joined: '01/09/2019'
 }
