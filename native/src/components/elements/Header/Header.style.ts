@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { BLUE } from 'src/constants'
+import { BLUE, HEADLINE } from 'src/constants'
 import { View, Text, TouchableOpacity } from 'react-native'
 
 export const Header = styled(View)({
@@ -13,6 +13,7 @@ export const Header = styled(View)({
 export const Col = styled(View)({
   flex: 1,
   display: 'flex',
+  flexDirection: 'column',
   alignItems: (p) => p.float,
   justifyContent: 'center'
 })
@@ -27,9 +28,8 @@ export const Chevron = styled(Text)({
 })
 
 export const Title = styled(Text)({
-  fontSize: 20,
-  lineHeight: 25,
+  fontSize: HEADLINE,
+  lineHeight: HEADLINE,
   color: BLUE,
-  fontWeight: p => p.weight
+  fontWeight: (p) => p.weight
 })
-

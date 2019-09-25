@@ -1,8 +1,8 @@
-import newPost from './newPost.reducer'
+import post from './post.reducer'
 import user from './user.reducer'
 import { combineReducers } from 'redux'
 
 export default combineReducers({
-  newPost,
+  post,
   user
 })

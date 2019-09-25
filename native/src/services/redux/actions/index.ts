@@ -1,1 +1,1 @@
-export { typeNewPost } from './newPost.action'
+export { typeNewPost, saveNewPost } from './post.action'
