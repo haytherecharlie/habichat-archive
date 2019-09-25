@@ -1,5 +1,6 @@
 import React from 'react'
-import {withNavigation} from 'react-navigation'
+import { withNavigation } from 'react-navigation'
+import { Keyboard } from 'react-native'
 import * as S from './PostButton.style'
 
 const PostButton = ({ navigation, postText, saveNewPost, typeNewPost }) => {
@@ -7,6 +8,7 @@ const PostButton = ({ navigation, postText, saveNewPost, typeNewPost }) => {
     if (postText.text !== '') {
       saveNewPost(postText)
       typeNewPost('')
+      Keyboard.dismiss()
       return navigation.navigate('Community')
     }
   }

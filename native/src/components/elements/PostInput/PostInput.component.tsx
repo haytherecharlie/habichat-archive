@@ -1,14 +1,14 @@
 import React, { useRef } from 'react'
-import * as S from './NewPostInput.style'
+import * as S from './PostInput.style'
 
 interface Props {
-  typeNewPost: func,
+  typeNewPost: func
   value: string
 }
 
-const NewPostInput = ({ value, typeNewPost }: Props) => {
+const PostInput = ({ value, typeNewPost }: Props) => {
   return (
-    <S.Border>
+    <S.PostInput>
       <S.Input
         autoCapitalize="sentences"
         autoCompleteType="off"
@@ -31,10 +31,11 @@ const NewPostInput = ({ value, typeNewPost }: Props) => {
         numberOfLines={10}
         onChangeText={(t) => typeNewPost(t)}
         placeholder="Say Something.."
+        textAlignVertical="top"
         value={value}
       />
-    </S.Border>
+    </S.PostInput>
   )
 }
 
-export default NewPostInput
+export default PostInput

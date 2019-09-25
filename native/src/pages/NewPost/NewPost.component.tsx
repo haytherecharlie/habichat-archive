@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from 'src/components/modules/Header'
-import NewPostInput from 'src/components/elements/NewPostInput'
+import PostInput from 'src/components/elements/PostInput'
 import * as S from './NewPost.style'
 
 const NewPost = () => {
   return (
     <S.NewPost>
       <Header />
-      <NewPostInput />
+      <PostInput />
     </S.NewPost>
   )
 }

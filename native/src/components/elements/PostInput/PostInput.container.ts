@@ -1,4 +1,4 @@
-import NewPost from './NewPostInput.component'
+import PostInput from './PostInput.component'
 import { typeNewPost } from 'src/services/redux/actions'
 import { connect } from 'react-redux'
 
@@ -16,4 +16,4 @@ const dispatch = {
 export default connect(
   state,
   dispatch
-)(NewPost)
+)(PostInput)
