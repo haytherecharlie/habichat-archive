@@ -1,17 +1,17 @@
 import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer } from 'react-navigation'
-import StatusBar from 'src/components/elements/StatusBar'
+import StatusBar from 'src/components/StatusBar'
 import Community from 'src/pages/Community'
 import Compose from 'src/pages/Compose'
 import Profile from 'src/pages/Profile'
-import Loading from 'src/components/elements/Loading'
+import Loading from 'src/components/Loading'
 import * as S from './Router.style'
 
 const Routes = createAppContainer(
   createStackNavigator(
     { Community, Compose, Profile },
-    { initialRouteName: 'Compose', defaultNavigationOptions: { header: null } }
+    { initialRouteName: 'Community', defaultNavigationOptions: { header: null } }
   )
 )
 

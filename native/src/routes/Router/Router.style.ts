@@ -9,4 +9,5 @@ export const KeyboardView = styled(KeyboardAvoidingView)({
 
 export const PageView = styled(View)({
   flex: 1,
+  backgroundColor: '#f8f8f8'
 })

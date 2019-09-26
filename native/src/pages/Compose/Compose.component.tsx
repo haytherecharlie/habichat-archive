@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import Header from 'src/components/modules/Header'
-import PostInput from 'src/components/elements/PostInput'
+import Header from 'src/components/Header'
+import PostInput from 'src/components/PostInput'
 import * as S from './Compose.style'
 
 const Compose = () => {
