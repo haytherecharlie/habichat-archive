@@ -4,7 +4,7 @@ import Profile from './Profile.component'
 
 export const state = (state) => {
   return {
-    loading: !R.propOr([true, 'state', 'community', 'account', 'connected'])
+    loading: !R.pathOr(false, ['account', 'connected'])(state)
   }
 }
 

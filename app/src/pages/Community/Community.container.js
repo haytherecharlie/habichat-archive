@@ -4,12 +4,16 @@ import { subMembers, subPosts, unsubMembers, unsubPosts } from 'services/redux'
 import Community from './Community.component'
 
 export const state = (state) => {
-  const membersConnected = !R.propOr([false, 'state', 'community', 'members', 'connected'])
-  const postsConnected = !R.propOr([false, 'state', 'community', 'posts', 'connected'])
+  const membersConnected = R.pathOr(false, ['members', 'connected'])(state)
+  const postsConnected = R.pathOr(false, ['posts', 'connected'])(state)
+  const members = R.pathOr([], ['members', 'data'])(state)
+  const posts = R.pathOr([], ['posts', 'data'])(state)
+  const account = R.pathOr({}, ['account', 'data'])(state)
   return {
-    loading: membersConnected || postsConnected,
-    members: R.propOr([[], 'state', 'community', 'members', 'data']),
-    posts: R.propOr([[], 'state', 'community', 'posts', 'data'])
+    loading: !membersConnected || !postsConnected,
+    members,
+    posts,
+    account
   }
 }
 

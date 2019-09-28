@@ -5,11 +5,12 @@ import Profile from 'pages/Profile'
 import { documentListener } from 'services/firebase'
 import types from 'prop-types'
 
-export const Router = ({ subAccount, unsubAccount }) => {
+export const Router = ({ subAccount, unsubAccount, subCommunity, unsubCommunity }) => {
   useEffect(() => {
     documentListener('account', subAccount)
-    return () => Promise.all([unsubAccount()])
-  }, [subAccount, unsubAccount])
+    documentListener('community', subCommunity)
+    return () => Promise.all([unsubAccount(), unsubCommunity()])
+  }, [subAccount, unsubAccount, subCommunity, unsubCommunity])
 
   return (
     <BrowserRouter basePath="/">
@@ -23,7 +24,9 @@ export const Router = ({ subAccount, unsubAccount }) => {
 
 Router.propTypes = {
   subAccount: types.func.isRequired,
-  unsubAccount: types.func.isRequired
+  unsubAccount: types.func.isRequired,
+  subCommunity: types.func.isRequired,
+  unsubCommunity: types.func.isRequired
 }
 
 export default Router

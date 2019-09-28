@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { subAccount, unsubAccount } from 'services/redux'
+import { subAccount, unsubAccount, subCommunity, unsubCommunity } from 'services/redux'
 import Router from './Router.component'
 
 export const state = (state) => {
@@ -8,7 +8,9 @@ export const state = (state) => {
 
 export const dispatch = {
   subAccount,
-  unsubAccount
+  unsubAccount,
+  subCommunity,
+  unsubCommunity
 }
 
 export default connect(
