@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from 'assets/styles'
 import { IoIosArrowDown } from 'react-icons/io'
 
 export const ScrollDown = styled('div')({
@@ -19,5 +18,5 @@ export const ArrowDown = styled(IoIosArrowDown)({
 export const Label = styled('div')({
   fontWeight: 500,
   fontSize: 15,
-  color: colors.white
+  color: '#FFFFFF'
 })

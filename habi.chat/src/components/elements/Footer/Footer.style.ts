@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from 'assets/styles'
 
 export const Footer = styled('div')({
   flex: 1,
@@ -8,8 +7,8 @@ export const Footer = styled('div')({
   alignItems: 'center',
   justifyContent: 'center',
   width: '100vw',
-  color: colors.white,
-  backgroundColor: colors.blue
+  color: '#FFFFFF',
+  backgroundColor: '#191D38'
 })
 
 export const Title = styled('span')({

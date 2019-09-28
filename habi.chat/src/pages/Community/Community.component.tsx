@@ -17,14 +17,12 @@ const Community = () => {
       </S.BoxRow>
 
       <S.Divider />
-      {/* Your Community */}
+
+      {/* Community Members */}
       <S.BoxRow>
         <S.BoxLeft>
-          <S.SectionTitle>{`Your Community`}</S.SectionTitle>
+          <S.SectionTitle>{`Community Members`}</S.SectionTitle>
           <S.MemberList>
-            <S.MemberCircle />
-            <S.MemberCircle />
-            <S.MemberCircle />
             <S.MemberCircle />
             <S.MemberCircle />
             <S.MemberCircle />
@@ -40,6 +38,13 @@ const Community = () => {
       <S.BoxRow>
         <S.BoxLeft>
           <S.SectionTitle>{`Community Posts`}</S.SectionTitle>
+          <S.Card />
+          <S.Card />
+          <S.Card />
+          <S.Card />
+          <S.Card />
+          <S.Card />
+          <S.Card />
         </S.BoxLeft>
       </S.BoxRow>
     </S.Community>

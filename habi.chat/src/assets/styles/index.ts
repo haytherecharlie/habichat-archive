@@ -1,34 +1,31 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const colors = {
-  blue: '#191D38',
-  white: '#FFFFFF'
-}
-
 export const GlobalStyle = createGlobalStyle({
   '@font-face': {
     fontFamily: 'habichat',
     src: `url(${require('../fonts/habichat.otf')})`
   },
   '*, *::before, *::after': {
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    '-webkit-overflow-scrolling': 'touch'
+
   },
   html: {},
   body: {
     margin: 0,
-    color: colors.blue,
+    color: '#191D38',
     fontFamily: 'sans-serif',
     lineHeight: 1.5,
     fontSize: 20,
     '-webkit-text-size-adjust': '100%',
     '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
-    background: colors.blue
+    background: '#191D38'
   },
   '#root': {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'stretch',
+    alignItems: 'center',
     justifyContent: 'stretch'
   }
 })

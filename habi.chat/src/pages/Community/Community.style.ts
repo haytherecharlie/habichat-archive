@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors } from 'assets/styles'
 
 export const Community = styled('div')({
   flex: 1,
@@ -7,8 +6,9 @@ export const Community = styled('div')({
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'stretch',
-  backgroundColor: colors.white,
-  padding: '2rem 1rem'
+  backgroundColor: '#F8F8F8',
+  padding: '2rem 1rem',
+  width: '100%',
 })
 
 export const Divider = styled('div')({
@@ -29,7 +29,7 @@ export const BoxLeft = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
-  justifyContent: 'center',
+  justifyContent: 'center'
 })
 
 export const BoxRight = styled('div')({
@@ -42,7 +42,7 @@ export const BoxRight = styled('div')({
 
 export const Img = styled('img')({ height: 40 })
 export const CommunityName = styled('span')({
-  color: colors.blue,
+  color: '#191D38',
   fontSize: '.9rem',
   fontWeight: 500
 })
@@ -56,7 +56,7 @@ export const ProfileCircle = styled('img')({
 
 export const SectionTitle = styled('span')({
   fontFamily: 'habichat',
-  color: colors.blue,
+  color: '#191D38',
   fontSize: '1rem'
 })
 
@@ -75,4 +75,13 @@ export const MemberCircle = styled('img')({
   borderRadius: '50%',
   backgroundColor: 'orange',
   marginLeft: '.5rem'
+})
+
+export const Card = styled('div')({
+  width: '100%',
+  height: 100,
+  background: '#fff',
+  boxShadow: '0px 2px 5px rgba(0,0,0,0.2)',
+  borderRadius: 5,
+  margin: `10px 0`
 })
