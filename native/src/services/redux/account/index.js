@@ -1,4 +1,4 @@
-import { unsubscribe } from 'services/firebase'
+import { unsubscribe } from 'src/services/firebase'
 
 const SUBSCRIBE_ACCOUNT = 'SUBSCRIBE_ACCOUNT'
 const UNSUBSCRIBE_ACCOUNT = 'UNSUBSCRIBE_ACCOUNT'
