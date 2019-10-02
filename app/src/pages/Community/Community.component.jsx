@@ -60,13 +60,11 @@ const Community = ({
         <S.BoxRow>
           <S.BoxLeft>
             <S.SectionTitle>{`Community Posts`}</S.SectionTitle>
-            <S.Card />
-            <S.Card />
-            <S.Card />
-            <S.Card />
-            <S.Card />
-            <S.Card />
-            <S.Card />
+            {posts.map((post) => (
+              <S.Card>
+                <div>{post.body}</div>
+              </S.Card>
+            ))}
           </S.BoxLeft>
         </S.BoxRow>
       </S.Community>
