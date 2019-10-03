@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import { subAccount, unsubAccount, subCommunity, unsubCommunity } from 'src/services/redux'
-import Community from 'src/screens/Community'
+import CommunityScreen from 'src/screens/CommunityScreen'
+import PostScreen from 'src/screens/PostScreen'
 import Router from './Router.component'
 
 export const Stack = createAppContainer(
-  createStackNavigator({ Community }, { initialRouteName: 'Community' })
+  createStackNavigator({ CommunityScreen, PostScreen }, { initialRouteName: 'CommunityScreen' })
 )
 
 export const state = (state) => {
