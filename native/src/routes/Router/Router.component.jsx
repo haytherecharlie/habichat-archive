@@ -1,12 +1,23 @@
-import React from "react"
+import React from 'react'
+import { createAppContainer } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
+import Community from 'src/screens/Community'
 // import types from 'prop-types'
-import * as S from "./Router.style"
+import * as S from './Router.style'
+
+const Stack = createAppContainer(
+  createStackNavigator(
+    {
+      Community
+    },
+    {
+      initialRouteName: 'Community'
+    }
+  )
+)
 
 const Router = () => {
-  return (
-    <S.Wrapper>
-    </S.Wrapper>
-  )
+  return <Stack />
 }
 
 Router.defaultProps = {}
