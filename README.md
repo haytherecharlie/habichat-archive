@@ -1,5 +1,5 @@
 ---
-[![alt text](https://github.com/haytherecharlie/habichat-firebase/blob/master/design/images/github-banner.jpg "Logo Title Text 1")](https://www.google.com)
+[![alt text](https://github.com/haytherecharlie/habichat-firebase/blob/master/design/images/github-banner.jpg "Logo Title Text 1")](https://habi.chat)
 
 ---
 
