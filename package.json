@@ -1,0 +1,22 @@
+{
+  "name": "habichat",
+  "version": "1.0.0",
+  "description": "build a local community",
+  "main": "./www/public/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haytherecharlie/habichat-firebase.git"
+  },
+  "keywords": [
+    "habichat",
+    "firebase",
+    "react",
+    "react-native"
+  ],
+  "author": "Charlie Hay",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/haytherecharlie/habichat-firebase/issues"
+  },
+  "homepage": "https://github.com/haytherecharlie/habichat-firebase#readme"
+}

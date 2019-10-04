@@ -1,5 +1,5 @@
 ---
-# habichat | build a community.
+# habichat | build a local community.
 ---
 
 ### TABLE OF CONTENTS
