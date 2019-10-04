@@ -1,12 +1,5 @@
-import { initializeApp, auth, firestore } from 'firebase-admin'
+import admin from 'firebase-admin'
 
-initializeApp()
-const fb = auth()
-const db = firestore()
-
-export const signCustomToken = async (email) => {
-  const token = await fb.createCustomToken(email).catch((err) => {
-    throw `Error creating custom token ${token}`
-  })
-  return token
-}
+admin.initializeApp()
+export const auth = admin.auth()
+export const db = admin.firestore()
