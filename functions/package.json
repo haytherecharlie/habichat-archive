@@ -20,7 +20,8 @@
     "app-module-path": "^2.2.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "firebase-admin": "^8.0.0",
-    "firebase-functions": "^3.1.0"
+    "firebase-functions": "^3.1.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
