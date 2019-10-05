@@ -1,12 +1,16 @@
-import { auth } from 'services/firebase'
+import { createVerifyEntry } from 'services/firebase'
 
-const helloWorld = async (req, res) => {
-  console.log('yes')
-  res.status(200).send('hello email')
-  // const token = await auth.createCustomToken(email).catch((err) => {
-  //   throw `Error creating custom token ${token}`
-  // })
-  // res.status(200).send(token)
+const emailController = async (req, res) => {
+  try {
+    const { email } = req.body
+    if (email) {
+      await createVerifyEntry(email)
+      return res.status(200).send('success')
+    }
+    throw { message: 'Please provide email address' }
+  } catch (err) {
+    return res.status(400).send(err.message)
+  }
 }
 
-export default helloWorld
+export default emailController
