@@ -1,5 +1,6 @@
 import app from 'firebase/app'
 import 'firebase/firestore'
+import 'firebase/auth'
 
 app.initializeApp({
   apiKey: 'AIzaSyDKNEY1lzsiDJOTRNHixbQQGzYquHMLCM4',
@@ -12,6 +13,7 @@ app.initializeApp({
 })
 
 const db = app.firestore()
+const auth = app.auth()
 
 const refs = {
   account: db.collection('users').doc('3EgYN5H9lXCXffC495Nc'),
@@ -25,6 +27,10 @@ export const unsubscribe = {
   community: undefined,
   members: undefined,
   posts: undefined,
+}
+
+export const authListener = (ref, callback) => {
+  unsubscribe[ref] = auth.onAuthStateChanged((user) => user ? callback(user) : callback(false))
 }
 
 export const documentListener = (ref, callback) => {

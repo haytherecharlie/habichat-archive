@@ -1,17 +1,26 @@
-const path = require('path')
-
 module.exports = function(api) {
-  api.cache(true);
+  api.cache(true)
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      ['module-resolver', {
-        extensions: ['.js', '.jsx'],
-        root: ['./'],
-        alias: {
-          src: path.resolve(__dirname, 'src')
+      [ 'module-resolver',
+        {
+          extensions: [
+            '.js',
+            '.jsx',
+            '**/*.*.ts',
+            '**/*.*.tsx',
+            '.android.js',
+            '.android.tsx',
+            '.ios.js',
+            '.ios.tsx'
+          ],
+          root: ['./'],
+          alias: {
+            src: './src'
+          }
         }
-      }]
+      ]
     ]
-  };
-};
+  }
+}

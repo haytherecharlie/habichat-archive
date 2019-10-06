@@ -4,7 +4,7 @@
     "slug": "habichat",
     "privacy": "public",
     "sdkVersion": "35.0.0",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [ "ios", "android", "web" ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/app-icon.png",
@@ -13,15 +13,13 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "packagerOpts": {
-      "sourceExts": ["js", "json", "jsx"]
-    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [ "**/*" ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "userInterfaceStyle": "automatic"
     }
   }
 }
