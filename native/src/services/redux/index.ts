@@ -4,7 +4,7 @@ import { subAccount, unsubAccount, reduceAccount } from './account'
 import { subCommunity, unsubCommunity, reduceCommunity } from './community'
 import { subMembers, unsubMembers, reduceMembers } from './members'
 import { subPosts, unsubPosts, reducePosts } from './posts'
-import { setDarkMode, reduceTheme } from './theme'
+import { setDarkMode, setScreenSize, reduceTheme } from './theme'
 
 const rootReducer = combineReducers({
   account: reduceAccount,
@@ -23,7 +23,8 @@ export {
   unsubMembers,
   subPosts,
   unsubPosts,
-  setDarkMode
+  setDarkMode,
+  setScreenSize
 }
 
 export default __DEV__ ? createStore(rootReducer, devToolsEnhancer()) : createStore(rootReducer)

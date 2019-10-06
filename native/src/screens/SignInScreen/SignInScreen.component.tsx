@@ -5,7 +5,7 @@ import * as S from './SignInScreen.style'
 
 const SignInScreen = () => {
   return (
-    <PageWrapper>
+    <PageWrapper loading={false}>
       <EmailInput />
     </PageWrapper>
   )
