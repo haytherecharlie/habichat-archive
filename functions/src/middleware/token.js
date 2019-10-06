@@ -5,7 +5,7 @@ const authorizeRequest = async (req, res, next) => {
   try {
     const { token } = req.headers
     await jsonwebtoken.verify(token, authSecret, { ignoreExpiration: true })
-    next()
+    return next()
   } catch (err) {
     return res.status(500).send(err.message)
   }

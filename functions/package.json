@@ -6,7 +6,7 @@
     "build:watch": "babel --watch -d ./build ./src -s",
     "deploy": "firebase deploy --only functions",
     "dev": "npm run build:watch | npm run serve",
-    "lint": "eslint ./src",
+    "lint": "eslint ./build",
     "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",

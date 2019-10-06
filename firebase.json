@@ -10,8 +10,7 @@
     "public": "./habi.chat/build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
-      { "source": "/api/signin/email", "function": "signinemail" },
-      { "source": "/api/signin/verify", "function": "signinverify" },
+      { "source": "/api/auth/**", "function": "auth" },
       { "source": "/**", "destination": "/index.html" }
     ]
   },
