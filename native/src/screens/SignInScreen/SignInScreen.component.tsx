@@ -1,12 +1,13 @@
 import React from 'react'
+import PageWrapper from 'src/components/Universal/PageWrapper'
 import EmailInput from 'src/components/SignIn/EmailInput'
 import * as S from './SignInScreen.style'
 
 const SignInScreen = () => {
   return (
-    <S.Wrapper>
+    <PageWrapper>
       <EmailInput />
-    </S.Wrapper>
+    </PageWrapper>
   )
 }
 

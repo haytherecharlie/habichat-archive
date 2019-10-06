@@ -6,7 +6,14 @@ import SignInScreen from 'src/screens/SignInScreen'
 import SignedOutRouter from './SignedOutRouter.component'
 
 export const Stack = createAppContainer(
-  createStackNavigator({ SignInScreen }, { initialRouteName: 'SignInScreen' })
+  createStackNavigator(
+    { SignInScreen },
+    { initialRouteName: 'SignInScreen',
+      defaultNavigationOptions: {
+        header: null
+      }
+    }
+  )
 )
 
 export const state = (state) => {

@@ -6,7 +6,7 @@ export const Wrapper = styled(View)({
   display: `flex`,
   flexDirection: `column`,
   alignItems: `center`,
-  justifyContent: `center`
+  justifyContent: `center`,
 })
 
 export const Span = styled(Text)({

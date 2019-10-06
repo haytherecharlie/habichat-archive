@@ -1,6 +1,6 @@
 import { pathOr } from 'ramda'
 import { connect } from 'react-redux'
-import { subAccount, unsubAccount } from 'src/services/redux'
+import { subAccount, unsubAccount, setDarkMode } from 'src/services/redux'
 import Router from './Router.component'
 
 export const state = (state) => {
@@ -12,7 +12,8 @@ export const state = (state) => {
 
 export const dispatch = {
   subAccount,
-  unsubAccount
+  unsubAccount,
+  setDarkMode
 }
 
 export default connect(

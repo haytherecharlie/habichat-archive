@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import types from 'prop-types'
 import { Button } from 'react-native'
+import PageWrapper from 'src/components/Universal/PageWrapper'
 import * as S from './PostScreen.style'
 
 const PostScreen = ({ navigation }) => {
@@ -8,12 +9,12 @@ const PostScreen = ({ navigation }) => {
     return () => console.log('unmounted')
   }, [])
   return (
-    <S.Wrapper>
+    <PageWrapper>
       <Button
         onPress={() => navigation.navigate('CommunityScreen')}
         title="Go To Community Screen"
       />
-    </S.Wrapper>
+    </PageWrapper>
   )
 }
 
