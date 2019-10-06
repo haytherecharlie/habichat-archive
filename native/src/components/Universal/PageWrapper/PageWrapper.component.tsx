@@ -5,7 +5,7 @@ import * as S from './PageWrapper.style'
 
 const PageWrapper = ({ children, backgroundColor, loading }) => {
   return (
-    <S.PageWrapper backgroundColor={backgroundColor}>
+    <S.PageWrapper backgroundColor={backgroundColor} behavior="padding" enabled>
       {loading ? <Loading /> : children}
     </S.PageWrapper>
   )

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { View } from 'react-native'
+import { KeyboardAvoidingView } from 'react-native'
 
-export const PageWrapper = styled(View)({
+export const PageWrapper = styled(KeyboardAvoidingView)({
   flex: 1,
   display: 'flex',
   alignItems: 'center',

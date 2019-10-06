@@ -2,17 +2,20 @@ const BLACK = '#000000'
 const WHITE = '#FFFFFF'
 const GRAY = '#F8F8F8'
 const BLUE = '#191D38'
+const OCEAN = '#676E93'
 
 export const colorTheme = {
   dark: {
     darkMode: true,
     backgroundColor: BLUE,
-    primaryColor: WHITE
+    primaryColor: WHITE,
+    secondaryColor: OCEAN
   },
   light: {
     darkMode: false,
     backgroundColor: WHITE,
-    primaryColor: BLUE
+    primaryColor: BLUE,
+    secondaryColor: OCEAN
   }
 }
 

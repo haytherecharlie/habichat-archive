@@ -1,10 +1,11 @@
 import styled from 'styled-components'
-import { View } from 'react-native'
+import { TextInput, View, Text } from 'react-native'
 
-export const Wrapper = styled(View)({
-  flex: 1,
-  display: `flex`,
-  flexDirection: `column`,
-  alignItems: `center`,
-  justifyContent: `center`
+export const Wrapper = styled(View)({})
+export const ErrorMsg = styled(Text)({
+  color: 'red'
+})
+
+export const EmailInput = styled(TextInput)({
+  color: (p) => p.primaryColor
 })

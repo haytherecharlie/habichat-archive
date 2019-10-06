@@ -1,1 +1,1 @@
-export { default } from "./EmailInput.component";
+export { default } from "./EmailInput.container";

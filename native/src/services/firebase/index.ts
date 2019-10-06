@@ -44,3 +44,22 @@ export const collectionListener = (ref, callback) => {
     callback(array)
   })
 }
+
+const options = (json) => ({
+  headers: {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzAyMjgwNTJ9.dOnJtiNbZTsGKxms4DC30EocvTY4XgoWOnLq-bKl23Q"
+  },
+  method: "POST",
+  body: JSON.stringify(json)
+})
+
+export const callEmailAuthFunction = (email) => {
+  fetch('http://localhost:5000/habichat-75c78/us-central1/auth/email', options({ email }))
+  .then(res => {
+    console.log(res)
+    return res.json()
+  })
+  .then(json => console.log(json))
+  .catch(err => console.log(err))
+}
