@@ -1,4 +1,4 @@
 export const emailFunction = {
-  url: 'http://localhost:5000/habichat-75c78/us-central1/auth/email',
+  url: 'https://us-central1-habichat-75c78.cloudfunctions.net/auth/email',
   method: 'POST'
 }
