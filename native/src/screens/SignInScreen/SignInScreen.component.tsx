@@ -1,24 +1,35 @@
 import React, { useState } from 'react'
-import { callEmailAuthFunction } from 'src/services/firebase'
+import types from 'prop-types'
+import { callEmailFunction } from 'src/services/firebase'
 import PageWrapper from 'src/components/Universal/PageWrapper'
 import EmailInput from 'src/components/SignIn/EmailInput'
+import { Text } from 'react-native'
 import * as S from './SignInScreen.style'
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigation }) => {
   const [email, changeEmail] = useState('')
+  const [error, setError] = useState('')
 
-  const onSubmit = () => {
-    callEmailAuthFunction(email)
+  const onSubmit = async () => {
+    try {
+      await callEmailFunction(email)
+      return navigation.navigate('VerifyScreen')
+    } catch (err) {
+      setError('Error connecting to api')
+    }
   }
 
   return (
     <PageWrapper loading={false}>
       <EmailInput onChange={changeEmail} value={email} onSubmit={onSubmit} />
+      <Text>{JSON.stringify(error)}</Text>
     </PageWrapper>
   )
 }
 
 SignInScreen.defaultProps = {}
-SignInScreen.propTypes = {}
+SignInScreen.propTypes = {
+  navigation: types.object.isRequired
+}
 
 export default SignInScreen
