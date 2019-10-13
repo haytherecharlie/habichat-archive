@@ -1,10 +1,11 @@
 import React from 'react'
+import PinCodeInput from 'src/components/Verify/PinCodeInput'
 import * as S from './VerifyScreen.style'
 
 const VerifyScreen = () => {
   return (
     <S.VerifyScreen>
-      <S.Title>VerifyScreen</S.Title>
+      <PinCodeInput />
     </S.VerifyScreen>
   )
 }

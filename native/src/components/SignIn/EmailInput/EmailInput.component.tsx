@@ -5,6 +5,7 @@ import * as S from './EmailInput.style'
 
 const EmailInput = ({ primaryColor, secondaryColor, value, onChange, onSubmit }) => {
   const [error, toggleError] = useState(false)
+
   const checkEmail = () => {
     if (validateEmail(value)) return onSubmit()
     return toggleError(true)
