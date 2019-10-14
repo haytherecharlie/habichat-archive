@@ -1,28 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
+import types from 'prop-types'
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input'
 import * as S from './PinCodeInput.style'
 
-const PinCodeInput = () => {
-  const [digits, setDigits] = useState('')
-
-  const onFulFill = (code) => {
-    console.log(code)
-  }
-
+const PinCodeInput = ({ value, onChange, onSubmit }) => {
   return (
     <S.PinCodeInput>
       <SmoothPinCodeInput
         autoFocus={true}
         cellStyle={{ borderBottomWidth: 2, borderColor: 'gray' }}
         cellStyleFocused={{ borderColor: 'black' }}
-        value={digits}
-        onTextChange={(digits) => setDigits(digits)}
-        onFulfill={onFulFill}
+        value={value}
+        onTextChange={onChange}
+        onFulfill={onSubmit}
         keyboardType="number-pad"
         placeholder=""
       />
     </S.PinCodeInput>
   )
+}
+
+PinCodeInput.propTypes = {
+  value: types.string.isRequired,
+  onChange: types.func.isRequired,
+  onSubmit: types.func.isRequired
 }
 
 export default PinCodeInput

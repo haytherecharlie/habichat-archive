@@ -9,7 +9,7 @@ import SignedOutRouter from './SignedOutRouter.component'
 export const Stack = createAppContainer(
   createStackNavigator(
     { SignInScreen, VerifyScreen },
-    { initialRouteName: 'VerifyScreen',
+    { initialRouteName: 'SignInScreen',
       defaultNavigationOptions: {
         header: null
       }

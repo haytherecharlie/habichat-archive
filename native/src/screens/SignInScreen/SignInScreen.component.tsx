@@ -15,6 +15,7 @@ const SignInScreen = ({ navigation }) => {
       await callEmailFunction(email)
       return navigation.navigate('VerifyScreen')
     } catch (err) {
+      console.log(err)
       setError('Error connecting to api')
     }
   }
