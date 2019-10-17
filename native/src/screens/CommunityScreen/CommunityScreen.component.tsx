@@ -23,7 +23,7 @@ const CommunityScreen = ({
   }, [subMembers, subPosts, unsubMembers, unsubPosts])
 
   return (
-    <PageWrapper>
+    <PageWrapper loading={false}>
       <Button onPress={() => navigation.navigate('PostScreen')} title="Go To Post Screen" />
     </PageWrapper>
   )

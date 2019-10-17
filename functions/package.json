@@ -2,12 +2,12 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
-    "build": "babel -d ./build ./src -s",
+    "build": "NODE_ENV=prod babel -d ./build ./src -s",
     "build:watch": "babel --watch -d ./build ./src -s",
     "deploy": "firebase deploy --only functions",
     "dev": "npm run build:watch | npm run serve",
     "lint": "eslint ./build",
-    "serve": "firebase serve --only functions",
+    "serve": "NODE_ENV=dev firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "logs": "firebase functions:log"

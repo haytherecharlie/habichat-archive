@@ -7,7 +7,7 @@ import authVerify from 'controllers/auth/verify'
 const app = express()
 
 app.use(tokenMiddleware)
-app.post('/email', authEmail)
-app.post('/verify', tokenMiddleware, authVerify)
+app.post('/signin/email', authEmail)
+app.post('/signin/verify', tokenMiddleware, authVerify)
 
 export default https.onRequest(app)

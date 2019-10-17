@@ -6,13 +6,14 @@ import EmailInput from 'src/components/SignIn/EmailInput'
 import { Text } from 'react-native'
 import * as S from './SignInScreen.style'
 
-const SignInScreen = ({ navigation }) => {
+const SignInScreen = ({ navigation, preserveEmail }) => {
   const [email, changeEmail] = useState('')
   const [error, setError] = useState('')
 
   const onSubmit = async () => {
     try {
       await callEmailFunction(email)
+      preserveEmail(email)
       return navigation.navigate('VerifyScreen')
     } catch (err) {
       console.log(err)
@@ -30,7 +31,8 @@ const SignInScreen = ({ navigation }) => {
 
 SignInScreen.defaultProps = {}
 SignInScreen.propTypes = {
-  navigation: types.object.isRequired
+  navigation: types.object.isRequired,
+  preserveEmail: types.func.isRequired
 }
 
 export default SignInScreen

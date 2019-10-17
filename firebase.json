@@ -10,7 +10,7 @@
     "public": "./habi.chat/build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
-      { "source": "/api/auth/**", "function": "auth" },
+      { "source": "/api/**", "function": "api" },
       { "source": "/**", "destination": "/index.html" }
     ]
   },

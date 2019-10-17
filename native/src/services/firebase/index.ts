@@ -1,2 +1,3 @@
 export { unsubscribe, authListener, documentListener, collectionListener } from './listeners'
-export { callEmailFunction } from './fetches'
+export { callEmailFunction, callVerifyFunction } from './fetches'
+export { signInWithToken, signOut } from './authentication'

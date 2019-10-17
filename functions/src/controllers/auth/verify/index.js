@@ -7,7 +7,7 @@ const verifyController = async (req, res) => {
     if (code === codeAttempt) {
       const token = await getCustomToken(id, {})
       await deleteVerifyDoc(email)
-      return res.status(200).send(token)
+      return res.status(200).json({ token })
     }
     throw { message: 'Invalid verification code.' }
   } catch (err) {

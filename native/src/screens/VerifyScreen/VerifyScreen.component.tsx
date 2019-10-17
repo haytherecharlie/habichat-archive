@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
+import types from 'prop-types'
 import PinCodeInput from 'src/components/Verify/PinCodeInput'
-import { callVerifyFunction } from 'src/services/firebase/fetches'
+import { callVerifyFunction, signInWithToken } from 'src/services/firebase'
 import * as S from './VerifyScreen.style'
 
-const VerifyScreen = () => {
+const VerifyScreen = ({ email }) => {
   const [value, onChange] = useState('')
 
   const onSubmit = async (code) => {
     try {
-      await callVerifyFunction('charlie.hay@outlook.com', code)
-      console.log('SUCCESS')
+      const { token } = await callVerifyFunction(email, code)
+      await signInWithToken(token)
     } catch (err) {
       console.log(err)
     }
@@ -20,6 +21,10 @@ const VerifyScreen = () => {
       <PinCodeInput value={value} onChange={onChange} onSubmit={onSubmit} />
     </S.VerifyScreen>
   )
+}
+
+VerifyScreen.propTypes = {
+  email: types.string.isRequired
 }
 
 export default VerifyScreen
