@@ -23,8 +23,8 @@ const CommunityScreen = ({
 
   return (
     <PageWrapper>
-      <Button href="ProfileScreen" title="Go To Profile Screen" />
-      <Button href="PostScreen" title="Go To Post Screen" />
+      <PillButton href="ProfileScreen" title="Go To Profile Screen" />
+      <PillButton href="PostScreen" title="Go To Post Screen" />
     </PageWrapper>
   )
 }

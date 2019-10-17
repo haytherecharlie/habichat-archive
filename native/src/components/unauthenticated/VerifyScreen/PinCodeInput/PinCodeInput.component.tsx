@@ -7,9 +7,12 @@ import * as S from './PinCodeInput.style'
 const PinCodeInput = ({ email }) => {
   const [value, onChange] = useState('')
 
-  const onSubmit = async () => {
+  const onSubmit = async (code) => {
     try {
-      const { token } = await callVerifyFunction(email, value)
+      const { token } = await callVerifyFunction(email, code)
+      console.log('EMAIL', email)
+      console.log('TOKEN', token)
+      console.log('VALUE', code)
       await signInWithToken(token)
     } catch (err) {
       console.log(err)
