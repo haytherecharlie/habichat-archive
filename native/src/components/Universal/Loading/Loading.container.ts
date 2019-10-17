@@ -4,7 +4,7 @@ import Loading from './Loading.component'
 
 export const state = (state) => {
   return {
-    backgroundColor: path(['theme', 'backgroundColor'])(state),
+    primaryColor: path(['theme', 'primaryColor'])(state),
     spinnerColor: path(['theme', 'primaryColor'])(state)
   }
 }

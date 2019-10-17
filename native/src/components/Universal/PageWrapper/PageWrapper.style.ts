@@ -6,5 +6,6 @@ export const PageWrapper = styled(KeyboardAvoidingView)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: (p) => p.backgroundColor
+  backgroundColor: (p) => p.backgroundColor,
+  padding: 10
 })

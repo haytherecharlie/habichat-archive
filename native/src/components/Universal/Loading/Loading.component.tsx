@@ -4,7 +4,7 @@ import types from 'prop-types'
 import Svg, { Circle } from 'react-native-svg'
 import * as S from './Loading.style'
 
-const Loading = ({ backgroundColor, spinnerColor }) => {
+const Loading = ({ primaryColor, spinnerColor }) => {
   const animation = new Animated.Value(0)
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Loading = ({ backgroundColor, spinnerColor }) => {
   })
 
   return (
-    <S.Loading backgroundColor={backgroundColor}>
+    <S.Loading backgroundColor={primaryColor}>
       <Animated.View style={{ transform: [{ rotate: rotation }] }}>
         <Svg height={40} width={40} x={0} y={0}>
           <Circle
@@ -37,7 +37,7 @@ const Loading = ({ backgroundColor, spinnerColor }) => {
 }
 
 Loading.defaultProps = {
-  backgroundColor: types.string.isRequired,
+  primaryColor: types.string.isRequired,
   spinnerColor: types.string.isRequired
 }
 

@@ -7,38 +7,38 @@ const OCEAN = '#676E93'
 export const colorTheme = {
   dark: {
     darkMode: true,
-    backgroundColor: BLUE,
-    primaryColor: WHITE,
-    secondaryColor: OCEAN
+    primaryColor: BLUE,
+    secondaryColor: WHITE,
+    accentColor: OCEAN
   },
   light: {
     darkMode: false,
-    backgroundColor: WHITE,
-    primaryColor: BLUE,
-    secondaryColor: OCEAN
+    primaryColor: WHITE,
+    secondaryColor: BLUE,
+    accentColor: OCEAN
   }
 }
 
 export const sizeTheme = {
   large: {
-    fontSize: 18
+    largeText: '20px',
+    mediumText: '18px',
+    smallText: '16px',
+    veritcalSpacing: '10px',
+    radius: '25px'
   },
   medium: {
-    fontSize: 15
+    largeText: '18px',
+    mediumText: '16px',
+    smallText: '14px',
+    veritcalSpacing: '10px',
+    radius: '25px'
   },
   small: {
-    fontSize: 12
+    largeText: '16px',
+    mediumText: '14px',
+    smallText: '12px',
+    veritcalSpacing: '10px',
+    radius: '25px'
   }
-}
-
-export const lightTheme = {
-  darkMode: false,
-  backgroundColor: WHITE,
-  primaryColor: BLUE
-}
-
-export const darkTheme = {
-  darkMode: true,
-  backgroundColor: BLUE,
-  primaryColor: WHITE
 }
