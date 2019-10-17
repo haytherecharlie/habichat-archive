@@ -1,5 +1,6 @@
-import { connect } from 'react-redux'
 import { path } from 'ramda'
+import { connect } from 'react-redux'
+import { withNavigation } from 'react-navigation'
 import PillButton from './PillButton.component'
 
 export const state = (state) => {
@@ -17,4 +18,4 @@ export const dispatch = {}
 export default connect(
   state,
   dispatch
-)(PillButton)
+)(withNavigation(PillButton))

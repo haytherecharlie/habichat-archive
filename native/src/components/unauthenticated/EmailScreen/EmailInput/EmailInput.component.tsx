@@ -1,13 +1,26 @@
 import React, { useState } from 'react'
 import types from 'prop-types'
+import { callEmailFunction } from 'src/services/firebase'
 import { validateEmail } from 'src/utils/validate'
 import * as S from './EmailInput.style'
 
-const EmailInput = ({ primaryColor, secondaryColor, value, onChange, onSubmit }) => {
+const EmailInput = ({ navigation, primaryColor, secondaryColor, preserveEmail }) => {
+  const [value, onChange] = useState('')
   const [error, toggleError] = useState(false)
 
+  const submitEmail = async () => {
+    try {
+      await callEmailFunction(value)
+      preserveEmail(value)
+      return navigation.navigate('VerifyScreen')
+    } catch (err) {
+      console.log(err)
+      return toggleError(true)
+    }
+  }
+
   const checkEmail = () => {
-    if (validateEmail(value)) return onSubmit()
+    if (validateEmail(value)) return submitEmail()
     return toggleError(true)
   }
 
@@ -21,7 +34,7 @@ const EmailInput = ({ primaryColor, secondaryColor, value, onChange, onSubmit })
   return (
     <S.Wrapper>
       <S.EmailInput
-        primaryColor={primaryColor}
+        primaryColor={secondaryColor}
         placeholder="Please enter your email address"
         placeholderTextColor={secondaryColor}
         onChangeText={onChange}
@@ -44,9 +57,8 @@ const EmailInput = ({ primaryColor, secondaryColor, value, onChange, onSubmit })
 EmailInput.propTypes = {
   primaryColor: types.string.isRequired,
   secondaryColor: types.string.isRequired,
-  value: types.string.isRequired,
-  onChange: types.func.isRequired,
-  onSubmit: types.func.isRequired
+  navigation: types.object.isRequired,
+  preserveEmail: types.func.isRequired
 }
 
 export default EmailInput

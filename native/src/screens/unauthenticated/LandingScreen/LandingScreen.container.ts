@@ -7,4 +7,7 @@ export const state = (state) => {
 
 export const dispatch = {}
 
-export default connect(state, dispatch)(LandingScreen)
+export default connect(
+  state,
+  dispatch
+)(LandingScreen)

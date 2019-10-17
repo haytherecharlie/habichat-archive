@@ -1,5 +1,7 @@
 import { path } from 'ramda'
 import { connect } from 'react-redux'
+import { withNavigation } from 'react-navigation'
+import { preserveEmail } from 'src/services/redux/account'
 import EmailInput from './EmailInput.component'
 
 export const state = (state) => {
@@ -9,9 +11,11 @@ export const state = (state) => {
   }
 }
 
-export const dispatch = {}
+export const dispatch = {
+  preserveEmail
+}
 
 export default connect(
   state,
   dispatch
-)(EmailInput)
+)(withNavigation(EmailInput))

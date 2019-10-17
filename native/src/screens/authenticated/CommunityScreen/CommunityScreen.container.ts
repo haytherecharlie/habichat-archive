@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import { pathOr } from 'ramda'
-import { withNavigation } from 'react-navigation'
 import { subMembers, subPosts, unsubMembers, unsubPosts } from 'src/services/redux'
 import CommunityScreen from './CommunityScreen.component'
 
@@ -25,4 +24,4 @@ export const dispatch = {
 export default connect(
   state,
   dispatch
-)(withNavigation(CommunityScreen))
+)(CommunityScreen)
