@@ -5,10 +5,11 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { subCommunity, unsubCommunity } from 'src/services/redux'
 import CommunityScreen from 'src/screens/authenticated/CommunityScreen'
 import PostScreen from 'src/screens/authenticated/PostScreen'
+import ProfileScreen from 'src/screens/authenticated/ProfileScreen'
 import AuthenticatedRouter from './AuthenticatedRouter.component'
 
 export const Stack = createAppContainer(
-  createStackNavigator({ CommunityScreen, PostScreen }, { initialRouteName: 'CommunityScreen' })
+  createStackNavigator({ CommunityScreen, PostScreen, ProfileScreen }, { initialRouteName: 'CommunityScreen' })
 )
 
 export const state = (state) => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import types from 'prop-types'
 import { callEmailFunction } from 'src/services/firebase'
-import PageWrapper from 'src/components/Universal/PageWrapper'
-import EmailInput from 'src/components/SignIn/EmailInput'
+import PageWrapper from 'src/components/universal/PageWrapper'
+import EmailInput from 'src/components/unauthenticated/EmailScreen/EmailInput'
 import { Text } from 'react-native'
 
 const EmailScreen = ({ navigation, preserveEmail }) => {

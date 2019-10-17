@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import types from 'prop-types'
 import { Button } from 'react-native'
-import PageWrapper from 'src/components/Universal/PageWrapper'
+import PageWrapper from 'src/components/universal/PageWrapper'
 import { signOut } from 'src/services/firebase'
 import * as S from './PostScreen.style'
 

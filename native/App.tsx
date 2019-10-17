@@ -4,7 +4,7 @@ import { KeyboardAvoidingView } from 'react-native'
 import { AppearanceProvider } from 'react-native-appearance'
 import store from 'src/services/redux'
 import Router from 'src/routes/Router'
-import EmailInput from 'src/components/SignIn/EmailInput'
+import EmailInput from 'src/components/unauthenticated/EmailScreen/EmailInput'
 
 const App = () => {
   return (

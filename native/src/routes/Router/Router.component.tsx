@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import types from 'prop-types'
 import { authListener } from 'src/services/firebase'
 import configureTheme from 'src/utils/configureTheme'
-import Loading from 'src/components/Universal/Loading'
+import Loading from 'src/components/universal/Loading'
 import AuthenticatedRouter from 'src/routes/AuthenticatedRouter'
 import UnauthenticatedRouter from 'src/routes/UnauthenticatedRouter'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import types from 'prop-types'
-import Loading from 'src/components/Universal/Loading'
+import Loading from 'src/components/universal/Loading'
 import * as S from './PageWrapper.style'
 
 const PageWrapper = ({ children, backgroundColor, loading }) => {

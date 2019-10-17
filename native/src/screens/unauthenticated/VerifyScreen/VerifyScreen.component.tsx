@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import types from 'prop-types'
 import { callVerifyFunction, signInWithToken } from 'src/services/firebase'
-import PinCodeInput from 'src/components/Verify/PinCodeInput'
-import PageWrapper from 'src/components/Universal/PageWrapper'
+import PinCodeInput from 'src/components/unauthenticated/VerifyScreen/PinCodeInput'
+import PageWrapper from 'src/components/universal/PageWrapper'
 import * as S from './VerifyScreen.style'
 
 const VerifyScreen = ({ email }) => {

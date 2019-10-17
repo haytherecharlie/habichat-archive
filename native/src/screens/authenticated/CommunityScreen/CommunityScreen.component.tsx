@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import types from 'prop-types'
 import { Button } from 'react-native'
 import { collectionListener } from 'src/services/firebase'
-import PageWrapper from 'src/components/Universal/PageWrapper'
+import PageWrapper from 'src/components/universal/PageWrapper'
 import * as S from './CommunityScreen.style'
 
 const CommunityScreen = ({
@@ -24,6 +24,7 @@ const CommunityScreen = ({
 
   return (
     <PageWrapper loading={false}>
+      <Button onPress={() => navigation.navigate('ProfileScreen')} title="Go To Profile Screen" />
       <Button onPress={() => navigation.navigate('PostScreen')} title="Go To Post Screen" />
     </PageWrapper>
   )
