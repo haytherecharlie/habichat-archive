@@ -30,7 +30,6 @@ const CommunityScreen = ({
   )
 }
 
-CommunityScreen.defaultProps = {}
 CommunityScreen.propTypes = {
   navigation: types.object.isRequired,
   subMembers: types.func.isRequired,

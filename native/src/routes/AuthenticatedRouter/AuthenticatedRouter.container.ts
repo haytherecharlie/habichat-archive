@@ -9,7 +9,15 @@ import ProfileScreen from 'src/screens/authenticated/ProfileScreen'
 import AuthenticatedRouter from './AuthenticatedRouter.component'
 
 export const Stack = createAppContainer(
-  createStackNavigator({ CommunityScreen, PostScreen, ProfileScreen }, { initialRouteName: 'CommunityScreen' })
+  createStackNavigator(
+    { CommunityScreen, PostScreen, ProfileScreen },
+    {
+      initialRouteName: 'CommunityScreen',
+      defaultNavigationOptions: {
+        header: null
+      }
+    }
+  )
 )
 
 export const state = (state) => {
