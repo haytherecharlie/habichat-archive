@@ -4,7 +4,7 @@ import { subAccount, unsubAccount, setDarkMode, setScreenSize } from 'src/servic
 import Router from './Router.component'
 
 export const state = (state) => {
-  const authenticated = pathOr(false, ['account', 'authenticated'])(state)
+  const authenticated = pathOr('pending', ['account', 'authenticated'])(state)
   return {
     authenticated
   }

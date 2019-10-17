@@ -6,15 +6,9 @@ import { signOut } from 'src/services/firebase'
 import * as S from './PostScreen.style'
 
 const PostScreen = ({ navigation }) => {
-  useEffect(() => {
-    return () => console.log('unmounted')
-  }, [])
+  useEffect(() => {}, [])
   return (
     <PageWrapper loading={false}>
-      <Button
-        onPress={() => navigation.navigate('CommunityScreen')}
-        title="Go To Community Screen"
-      />
       <Button onPress={() => signOut()} title="Sign Out" />
     </PageWrapper>
   )

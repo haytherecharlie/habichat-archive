@@ -11,6 +11,10 @@ const PageWrapper = ({ children, backgroundColor, loading }) => {
   )
 }
 
+PageWrapper.defaultProps = {
+  loading: false
+}
+
 PageWrapper.propTypes = {
   children: types.node.isRequired,
   backgroundColor: types.string.isRequired,

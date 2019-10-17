@@ -4,9 +4,8 @@ import { callEmailFunction } from 'src/services/firebase'
 import PageWrapper from 'src/components/Universal/PageWrapper'
 import EmailInput from 'src/components/SignIn/EmailInput'
 import { Text } from 'react-native'
-import * as S from './SignInScreen.style'
 
-const SignInScreen = ({ navigation, preserveEmail }) => {
+const EmailScreen = ({ navigation, preserveEmail }) => {
   const [email, changeEmail] = useState('')
   const [error, setError] = useState('')
 
@@ -29,10 +28,9 @@ const SignInScreen = ({ navigation, preserveEmail }) => {
   )
 }
 
-SignInScreen.defaultProps = {}
-SignInScreen.propTypes = {
+EmailScreen.propTypes = {
   navigation: types.object.isRequired,
   preserveEmail: types.func.isRequired
 }
 
-export default SignInScreen
+export default EmailScreen

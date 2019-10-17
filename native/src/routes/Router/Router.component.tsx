@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import types from 'prop-types'
 import { authListener } from 'src/services/firebase'
 import configureTheme from 'src/utils/configureTheme'
-import SignedInRouter from 'src/routes/SignedInRouter'
-import SignedOutRouter from 'src/routes/SignedOutRouter'
+import Loading from 'src/components/Universal/Loading'
+import AuthenticatedRouter from 'src/routes/AuthenticatedRouter'
+import UnauthenticatedRouter from 'src/routes/UnauthenticatedRouter'
 
 const Router = ({ authenticated, subAccount, unsubAccount, setDarkMode, setScreenSize }) => {
   useEffect(() => {
@@ -13,17 +14,17 @@ const Router = ({ authenticated, subAccount, unsubAccount, setDarkMode, setScree
   }, [subAccount, unsubAccount])
 
   switch (authenticated) {
+    case 'pending':
+      return <Loading />
     case true:
-      return <SignedInRouter />
+      return <AuthenticatedRouter />
     default:
-      return <SignedOutRouter />
+      return <UnauthenticatedRouter />
   }
 }
 
-Router.defaultProps = {}
-
 Router.propTypes = {
-  authenticated: types.bool.isRequired,
+  authenticated: types.oneOfType([types.bool, types.string]).isRequired,
   subAccount: types.func.isRequired,
   unsubAccount: types.func.isRequired,
   setDarkMode: types.func.isRequired,

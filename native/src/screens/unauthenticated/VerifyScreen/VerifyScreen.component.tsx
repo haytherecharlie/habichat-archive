@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import types from 'prop-types'
-import PinCodeInput from 'src/components/Verify/PinCodeInput'
 import { callVerifyFunction, signInWithToken } from 'src/services/firebase'
+import PinCodeInput from 'src/components/Verify/PinCodeInput'
+import PageWrapper from 'src/components/Universal/PageWrapper'
 import * as S from './VerifyScreen.style'
 
 const VerifyScreen = ({ email }) => {
@@ -17,9 +18,9 @@ const VerifyScreen = ({ email }) => {
   }
 
   return (
-    <S.VerifyScreen>
+    <PageWrapper>
       <PinCodeInput value={value} onChange={onChange} onSubmit={onSubmit} />
-    </S.VerifyScreen>
+    </PageWrapper>
   )
 }
 

@@ -10,7 +10,6 @@ const ProfileScreen = () => {
   )
 }
 
-ProfileScreen.defaultProps = {}
 ProfileScreen.propTypes = {}
 
 export default ProfileScreen
