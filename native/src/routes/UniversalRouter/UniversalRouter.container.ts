@@ -1,7 +1,7 @@
 import { pathOr } from 'ramda'
 import { connect } from 'react-redux'
 import { subAccount, unsubAccount, setDarkMode, setScreenSize } from 'src/services/redux'
-import Router from './Router.component'
+import UniversalRouter from './UniversalRouter.component'
 
 export const state = (state) => {
   const authenticated = pathOr('pending', ['account', 'authenticated'])(state)
@@ -20,4 +20,4 @@ export const dispatch = {
 export default connect(
   state,
   dispatch
-)(Router)
+)(UniversalRouter)

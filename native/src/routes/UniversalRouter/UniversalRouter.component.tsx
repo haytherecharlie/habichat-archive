@@ -6,7 +6,7 @@ import Loading from 'src/components/universal/Loading'
 import AuthenticatedRouter from 'src/routes/AuthenticatedRouter'
 import UnauthenticatedRouter from 'src/routes/UnauthenticatedRouter'
 
-const Router = ({ authenticated, subAccount, unsubAccount, setDarkMode, setScreenSize }) => {
+const UniversalRouter = ({ authenticated, subAccount, unsubAccount, setDarkMode, setScreenSize }) => {
   useEffect(() => {
     configureTheme(setDarkMode, setScreenSize)
     authListener('account', subAccount)
@@ -23,7 +23,7 @@ const Router = ({ authenticated, subAccount, unsubAccount, setDarkMode, setScree
   }
 }
 
-Router.propTypes = {
+UniversalRouter.propTypes = {
   authenticated: types.oneOfType([types.bool, types.string]).isRequired,
   subAccount: types.func.isRequired,
   unsubAccount: types.func.isRequired,
@@ -31,4 +31,4 @@ Router.propTypes = {
   setScreenSize: types.func.isRequired
 }
 
-export default Router
+export default UniversalRouter
