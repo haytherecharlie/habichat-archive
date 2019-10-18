@@ -9,8 +9,8 @@ const emailController = async (req, res) => {
     let userId = await getUserDocId(email)
     if (!userId) userId = await setUserDoc(createNewUser(email))
     const newCode = createNewCode()
-    await sendVerificationEmail(email, newCode)
     await setVerifyDoc(userId, email, newCode)
+    sendVerificationEmail(email, newCode)
     return res.sendStatus(200)
   } catch (err) {
     return res.status(400).send(err.message)

@@ -10,18 +10,13 @@ const configuration = {
   }
 }
 
-export const sendVerificationEmail = async (email, pin) => {
-  try {
-    const { user } = configuration.auth
-    await nodemailer.createTransport(configuration).sendMail({
-      from: user,
-      to: email,
-      subject: `Your Habichat Verification Pin`,
-      replyTo: user,
-      html: `Your pin is: ${pin}`
-    })
-  } catch (err) {
-    console.log(err.message)
-    throw `Error sending verify code to ${email}`
-  }
+export const sendVerificationEmail = (email, pin) => {
+  const { user } = configuration.auth
+  return nodemailer.createTransport(configuration).sendMail({
+    from: user,
+    to: email,
+    subject: `Your Habichat Verification Pin`,
+    replyTo: user,
+    html: `Your pin is: ${pin}`
+  })
 }
