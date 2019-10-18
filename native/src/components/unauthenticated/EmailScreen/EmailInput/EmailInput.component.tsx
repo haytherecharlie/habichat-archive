@@ -4,16 +4,25 @@ import { callEmailFunction } from 'src/services/firebase'
 import { validateEmail } from 'src/utils/validate'
 import * as S from './EmailInput.style'
 
-const EmailInput = ({ navigation, primaryColor, secondaryColor, preserveEmail }) => {
+const EmailInput = ({
+  navigation,
+  primaryColor,
+  secondaryColor,
+  preserveEmail,
+  startLoading,
+  stopLoading
+}) => {
   const [value, onChange] = useState('')
   const [error, toggleError] = useState(false)
 
   const submitEmail = async () => {
     try {
+      startLoading('emailScreen')
       await callEmailFunction(value)
       preserveEmail(value)
       return navigation.navigate('VerifyScreen')
     } catch (err) {
+      stopLoading('emailScreen')
       console.log(err)
       return toggleError(true)
     }
@@ -58,7 +67,9 @@ EmailInput.propTypes = {
   primaryColor: types.string.isRequired,
   secondaryColor: types.string.isRequired,
   navigation: types.object.isRequired,
-  preserveEmail: types.func.isRequired
+  preserveEmail: types.func.isRequired,
+  startLoading: types.func.isRequired,
+  stopLoading: types.func.isRequired
 }
 
 export default EmailInput
