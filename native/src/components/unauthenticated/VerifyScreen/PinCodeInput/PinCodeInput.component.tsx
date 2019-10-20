@@ -4,18 +4,17 @@ import { callVerifyFunction, signInWithToken } from 'src/services/firebase'
 import SmoothPinCodeInput from 'react-native-smooth-pincode-input'
 import * as S from './PinCodeInput.style'
 
-const PinCodeInput = ({ email }) => {
+const PinCodeInput = ({ email, startLoading, stopLoading }) => {
   const [value, onChange] = useState('')
 
   const onSubmit = async (code) => {
     try {
-      const { token } = await callVerifyFunction(email, code)
-      console.log('EMAIL', email)
-      console.log('TOKEN', token)
-      console.log('VALUE', code)
-      await signInWithToken(token)
+      startLoading('verifyScreen')
+      const { message } = await callVerifyFunction(email, code)
+      await signInWithToken(message)
+      return setTimeout(() => stopLoading('verifyScreen'), 1000)
     } catch (err) {
-      console.log(err)
+      stopLoading('verifyScreen')
     }
   }
 
@@ -36,7 +35,9 @@ const PinCodeInput = ({ email }) => {
 }
 
 PinCodeInput.propTypes = {
-  email: types.string.isRequired
+  email: types.string.isRequired,
+  startLoading: types.func.isRequired,
+  stopLoading: types.func.isRequired
 }
 
 export default PinCodeInput

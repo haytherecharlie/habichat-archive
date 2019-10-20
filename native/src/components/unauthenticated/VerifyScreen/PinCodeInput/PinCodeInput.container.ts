@@ -1,5 +1,6 @@
 import { path } from 'ramda'
 import { connect } from 'react-redux'
+import { startLoading, stopLoading } from 'src/services/redux'
 import PinCodeInput from './PinCodeInput.component'
 
 export const state = (state) => {
@@ -8,7 +9,10 @@ export const state = (state) => {
   }
 }
 
-export const dispatch = {}
+export const dispatch = {
+  startLoading,
+  stopLoading
+}
 
 export default connect(
   state,

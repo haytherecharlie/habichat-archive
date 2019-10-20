@@ -12,25 +12,24 @@ const EmailInput = ({
   startLoading,
   stopLoading
 }) => {
-  const [value, onChange] = useState('')
+  const [email, onChange] = useState('')
   const [error, toggleError] = useState(false)
 
   const submitEmail = async () => {
     try {
       startLoading('emailScreen')
-      await callEmailFunction(value)
-      preserveEmail(value)
-      return navigation.navigate('VerifyScreen')
+      await callEmailFunction(email)
+      preserveEmail(email)
+      navigation.navigate('VerifyScreen')
+      return setTimeout(() => stopLoading('emailScreen'), 1000)
     } catch (err) {
       stopLoading('emailScreen')
-      console.log(err)
-      return toggleError(true)
+      return toggleError('Error connecting to API.')
     }
   }
 
   const checkEmail = () => {
-    if (validateEmail(value)) return submitEmail()
-    return toggleError(true)
+    return validateEmail(email) ? submitEmail() : toggleError('Please enter a valid email address.')
   }
 
   const reselectInput = () => {
@@ -47,7 +46,7 @@ const EmailInput = ({
         placeholder="Please enter your email address"
         placeholderTextColor={secondaryColor}
         onChangeText={onChange}
-        value={value}
+        value={email}
         autoCapitalize="none"
         autoCompleteType="email"
         autoCorrect={false}
@@ -58,7 +57,7 @@ const EmailInput = ({
         keyboardType="email-address"
         onSubmitEditing={checkEmail}
       />
-      {error && <S.ErrorMsg>There was an error</S.ErrorMsg>}
+      {error && <S.ErrorMsg>{error}</S.ErrorMsg>}
     </S.Wrapper>
   )
 }

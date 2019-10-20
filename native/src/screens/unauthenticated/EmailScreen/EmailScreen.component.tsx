@@ -5,11 +5,11 @@ import EmailInput from 'src/components/unauthenticated/EmailScreen/EmailInput'
 
 const EmailScreen = ({ loading, stopLoading }) => {
   useEffect(() => {
-    return stopLoading
+    stopLoading()
   }, [])
 
   return (
-    <PageWrapper loading={loading}>
+    <PageWrapper loading={loading} text="Fetching user information..." >
       <EmailInput />
     </PageWrapper>
   )

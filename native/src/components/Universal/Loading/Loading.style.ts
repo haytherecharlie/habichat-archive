@@ -6,5 +6,10 @@ export const Loading = styled(View)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: p => p.backgroundColor
+  backgroundColor: (p) => p.backgroundColor
+})
+
+export const LoadingText = styled(Text)({
+  fontWeight: 400,
+  marginTop: '10px'
 })

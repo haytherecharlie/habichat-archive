@@ -4,7 +4,7 @@ import types from 'prop-types'
 import Svg, { Circle } from 'react-native-svg'
 import * as S from './Loading.style'
 
-const Loading = ({ primaryColor, spinnerColor }) => {
+const Loading = ({ primaryColor, spinnerColor, text }) => {
   const animation = new Animated.Value(0)
 
   useEffect(() => {
@@ -32,13 +32,19 @@ const Loading = ({ primaryColor, spinnerColor }) => {
           />
         </Svg>
       </Animated.View>
+      <S.LoadingText>{text}</S.LoadingText>
     </S.Loading>
   )
 }
 
 Loading.defaultProps = {
+  text: ""
+}
+
+Loading.propTypes = {
   primaryColor: types.string.isRequired,
-  spinnerColor: types.string.isRequired
+  spinnerColor: types.string.isRequired,
+  text: types.string
 }
 
 export default Loading
