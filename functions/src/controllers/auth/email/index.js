@@ -21,10 +21,10 @@ const emailController = async ({ body: { email } }, res) => {
     const userId = await createOrGetUserId(email)
     const newCode = createNewCode()
     await createVerificationFlow(email, userId, newCode)
-    return res.sendStatus(200)
+    return res.status(200).json({ message: 'success' })
   } catch (err) {
     console.log(err)
-    return res.status(400).send(err)
+    return res.status(400).json({ message: err })
   }
 }
 

@@ -19,12 +19,12 @@ const verifyController = async ({ body: { code, email } }, res) => {
     const { id, dbCode } = await getDbCodeAndId(email)
     if (code === dbCode) {
       const token = await getTokenDeleteDoc(id, email)
-      return res.status(200).json({ token })
+      return res.status(200).json({ message: token })
     }
     throw `Verify Auth: Invalid verification code. - ${id}`
   } catch (err) {
     console.log(err)
-    return res.status(400).send(err)
+    return res.status(400).json({ message: err })
   }
 }
 
