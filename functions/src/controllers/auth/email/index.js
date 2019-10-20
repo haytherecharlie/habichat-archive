@@ -3,17 +3,28 @@ import { sendVerificationEmail } from 'utils/nodemailer'
 import createNewUser from 'utils/createNewUser'
 import createNewCode from 'utils/createNewCode'
 
-const emailController = async (req, res) => {
+const createOrGetUserId = async (email) => {
+  const userId = await getUserDocId(email)
+    .catch(() => { throw `Email Auth: Failed getting user doc id. - ${email}` })
+  return userId ? userId : await setUserDoc(createNewUser(email))
+    .catch(() => { throw `Email Auth: Failed setting user doc. - ${email}` })
+}
+
+const createVerificationFlow = async (email, userId, newCode) => {
+  await setVerifyDoc(userId, email, newCode)
+    .catch(() => { throw `Email Auth: Failed setting verify doc. - ${userId}`})
+  return sendVerificationEmail(email, newCode)
+}
+
+const emailController = async ({ body: { email } }, res) => {
   try {
-    const { email } = req.body
-    let userId = await getUserDocId(email)
-    if (!userId) userId = await setUserDoc(createNewUser(email))
+    const userId = await createOrGetUserId(email)
     const newCode = createNewCode()
-    await setVerifyDoc(userId, email, newCode)
-    sendVerificationEmail(email, newCode)
+    await createVerificationFlow(email, userId, newCode)
     return res.sendStatus(200)
   } catch (err) {
-    return res.status(400).send(err.message)
+    console.log(err)
+    return res.status(400).send(err)
   }
 }
 
