@@ -4,8 +4,8 @@ import { KeyboardAvoidingView } from 'react-native'
 export const PageWrapper = styled(KeyboardAvoidingView)({
   flex: 1,
   display: 'flex',
-  alignItems: 'center',
+  alignItems: 'stretch',
   justifyContent: 'center',
   backgroundColor: (p) => p.backgroundColor,
-  padding: 10
+  padding: `0px 10px`
 })

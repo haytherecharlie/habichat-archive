@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { TouchableOpacity, Text } from 'react-native'
 
 export const PillButton = styled(TouchableOpacity)({
-  width: '90%',
+  width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

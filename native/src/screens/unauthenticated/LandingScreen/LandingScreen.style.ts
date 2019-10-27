@@ -1,13 +1,33 @@
 import styled from 'styled-components'
 import { View, Text } from 'react-native'
 
-export const LandingScreen = styled(View)({
-  flex: 1,
+const baseStyle = {
   display: 'flex',
-  alignItems: 'center',
+  flexDirection: 'column',
+  alignItems: 'center'
+  // border: '1px solid #000'
+}
+
+export const First = styled(View)({
+  ...baseStyle,
+  flex: 2,
   justifyContent: 'center'
 })
 
-export const Title = styled(Text)({
-  fontSize: 20
+export const Second = styled(View)({
+  ...baseStyle,
+  flex: 4,
+  justifyContent: 'center'
+})
+
+export const Third = styled(View)({
+  ...baseStyle,
+  flex: 1,
+  justifyContent: 'space-around'
+})
+
+export const Fourth = styled(View)({
+  ...baseStyle,
+  flex: 1,
+  justifyContent: 'space-around'
 })
