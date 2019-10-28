@@ -5,6 +5,7 @@ import { openBrowserAsync } from 'expo-web-browser'
 import * as S from './WebLink.style'
 
 const WebLink = ({ secondaryColor, smallText, children, href, darkMode }) => {
+  console.log(`${href}?dm=${darkMode}`)
   const openBrowserLink = async () => await openBrowserAsync(`${href}?dm=${darkMode}`)
 
   return (

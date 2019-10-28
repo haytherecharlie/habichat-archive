@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { KeyboardAvoidingView } from 'react-native'
+import { View } from 'react-native'
 import { AppearanceProvider } from 'react-native-appearance'
 import store from 'src/services/redux'
 import StatusBar from 'src/components/universal/StatusBar'

@@ -8,10 +8,14 @@ import { Wrapper } from './PrivacyPolicy.style'
 
 const PrivacyPolicy = ({ location: { search } }) => {
   recordPageView('/privacy')
-  const { dm = false } = parse(search)
+  const { dm = 'false' } = parse(search)
 
   return (
-    <Wrapper style={{ background: dm ? '#191D38' : '#fff', color: dm ? '#fff' : '#191D38' }}>
+    <Wrapper
+      style={{
+        background: dm === 'true' ? '#191D38' : '#fff',
+        color: dm === 'true' ? '#fff' : '#191D38'
+      }}>
       <Helmet seo={privacy} />
       <h2>Our Privacy Policy</h2>
       <p>

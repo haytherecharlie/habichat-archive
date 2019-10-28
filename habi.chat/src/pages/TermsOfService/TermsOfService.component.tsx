@@ -8,11 +8,13 @@ import * as S from './TermsOfService.style'
 
 const TermsOfService = ({ location: { search } }) => {
   recordPageView('/Terms')
-  const { dm = false } = parse(search)
-
+  const { dm = 'false' } = parse(search)
   return (
     <S.TermsOfService
-      style={{ background: dm ? '#191D38' : '#fff', color: dm ? '#fff' : '#191D38' }}>
+      style={{
+        background: dm === 'true' ? '#191D38' : '#fff',
+        color: dm === 'true' ? '#fff' : '#191D38'
+      }}>
       <Helmet seo={terms} />
       <h2>Habichat Terms of Service</h2>
       <h3>1. Terms</h3>
