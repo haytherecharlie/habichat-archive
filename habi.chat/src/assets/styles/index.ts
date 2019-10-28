@@ -8,7 +8,11 @@ export const GlobalStyle = createGlobalStyle({
   '*, *::before, *::after': {
     boxSizing: 'border-box',
     '-webkit-overflow-scrolling': 'touch'
-
+  },
+  a: {
+    '&:hover, &:visited, &:active': {
+      color: 'orange'
+    }
   },
   html: {},
   body: {

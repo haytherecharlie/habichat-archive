@@ -1,13 +1,18 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
+import { parse } from 'query-string'
 import { terms } from 'config/analytics.json'
 import Helmet from 'components/elements/Helmet'
 import { recordPageView } from 'utils/analytics'
 import * as S from './TermsOfService.style'
 
-const TermsOfService = () => {
+const TermsOfService = ({ location: { search } }) => {
   recordPageView('/Terms')
+  const { dm = false } = parse(search)
+
   return (
-    <S.TermsOfService>
+    <S.TermsOfService
+      style={{ background: dm ? '#191D38' : '#fff', color: dm ? '#fff' : '#191D38' }}>
       <Helmet seo={terms} />
       <h2>Habichat Terms of Service</h2>
       <h3>1. Terms</h3>
@@ -102,4 +107,4 @@ const TermsOfService = () => {
   )
 }
 
-export default TermsOfService
+export default withRouter(TermsOfService)

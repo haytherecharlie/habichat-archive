@@ -5,7 +5,6 @@ import Home from 'pages/Home'
 import TermsOfService from 'pages/TermsOfService'
 import PrivacyPolicy from 'pages/PrivacyPolicy'
 import Community from 'pages/Community'
-import Template from 'pages/Template'
 
 const HomePage = () => (
   <BrowserRouter>
@@ -15,7 +14,6 @@ const HomePage = () => (
       <Route exact path="/terms" component={TermsOfService} />
       <Route exact path="/privacy" component={PrivacyPolicy} />
       <Route exact path="/community" component={Community} />
-      <Route exact path="/template" component={Template} />
       <Route path="/**" render={() => <Redirect to="/" />} />
     </Switch>
   </BrowserRouter>

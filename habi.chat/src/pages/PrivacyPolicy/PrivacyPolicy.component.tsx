@@ -1,13 +1,17 @@
 import React from 'react'
-import { privacy } from 'config/analytics.json'
-import { recordPageView } from 'utils/analytics'
+import { withRouter } from 'react-router-dom'
+import { parse } from 'query-string'
 import Helmet from 'components/elements/Helmet'
-import * as S from './PrivacyPolicy.style'
+import { recordPageView } from 'utils/analytics'
+import { privacy } from 'config/analytics.json'
+import { Wrapper } from './PrivacyPolicy.style'
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = ({ location: { search } }) => {
   recordPageView('/privacy')
+  const { dm = false } = parse(search)
+
   return (
-    <S.PrivacyPolicy>
+    <Wrapper style={{ background: dm ? '#191D38' : '#fff', color: dm ? '#fff' : '#191D38' }}>
       <Helmet seo={privacy} />
       <h2>Our Privacy Policy</h2>
       <p>
@@ -49,8 +53,8 @@ const PrivacyPolicy = () => {
       </p>
       <p>This policy is effective as of 1 August 2019.</p>
       <p>- Team Habichat</p>
-    </S.PrivacyPolicy>
+    </Wrapper>
   )
 }
 
-export default PrivacyPolicy
+export default withRouter(PrivacyPolicy)
