@@ -27,7 +27,10 @@ export const Third = styled(View)({
 })
 
 export const Fourth = styled(View)({
-  ...baseStyle,
   flex: 1,
-  justifyContent: 'space-around'
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'flex-start',
+  justifyContent: 'space-around',
+  paddingTop: '20px'
 })

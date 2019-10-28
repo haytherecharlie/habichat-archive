@@ -3,6 +3,7 @@ import types from 'prop-types'
 import PageWrapper from 'src/components/universal/PageWrapper'
 import IconLogo from 'src/components/universal/IconLogo'
 import PillButton from 'src/components/universal/PillButton'
+import WebLink from 'src/components/universal/WebLink'
 import * as S from './LandingScreen.style'
 
 const LandingScreen = () => {
@@ -16,7 +17,10 @@ const LandingScreen = () => {
         <PillButton title="Sign In / Register" variant="default" href="EmailScreen" />
         <PillButton title="Learn More" variant="inverted" href="OnboardingScreen" />
       </S.Third>
-      <S.Fourth />
+      <S.Fourth>
+        <WebLink href="https://habi.chat/privacy">Privacy Policy</WebLink>
+        <WebLink href="https://habi.chat/terms">Terms of Service</WebLink>
+      </S.Fourth>
     </PageWrapper>
   )
 }
