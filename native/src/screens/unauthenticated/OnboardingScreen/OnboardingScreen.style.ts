@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-import { Button, Text } from 'react-native'
+import { View, Text } from 'react-native'
 
-export const Title = styled(Text)({
-  fontSize: 20
+export const Page = styled(View)({
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center'
 })
-
-export const BackButton = styled(Button)({})

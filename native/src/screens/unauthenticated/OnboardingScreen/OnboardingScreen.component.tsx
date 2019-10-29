@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import types from 'prop-types'
+import Swiper from 'react-native-swiper'
 import PillButton from 'src/components/universal/PillButton'
-import PageWrapper from 'src/components/universal/PageWrapper'
 import * as S from './OnboardingScreen.style'
 
 const OnboardingScreen = () => {
+  const [index, setIndex] = useState(0)
   return (
-    <PageWrapper>
-      <S.Title>OnboardingScreen</S.Title>
-      <PillButton title="Go Back" href="LandingScreen" />
-    </PageWrapper>
+    <Swiper index={index}>
+      <S.Page>
+        <PillButton onPress={() => setIndex(index + 1)} title="Page 1" />
+      </S.Page>
+      <S.Page>
+        <PillButton onPress={() => setIndex(index - 1)} title="Page 2" />
+      </S.Page>
+    </Swiper>
   )
 }
 
