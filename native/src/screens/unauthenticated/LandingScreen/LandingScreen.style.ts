@@ -10,13 +10,13 @@ const baseStyle = {
 
 export const First = styled(View)({
   ...baseStyle,
-  flex: 2,
+  flex: 1,
   justifyContent: 'center'
 })
 
 export const Second = styled(View)({
   ...baseStyle,
-  flex: 4,
+  flex: 5,
   justifyContent: 'center'
 })
 
