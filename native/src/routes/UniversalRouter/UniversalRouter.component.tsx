@@ -1,25 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import types from 'prop-types'
-import { authListener } from 'src/services/firebase'
-import configureTheme from 'src/utils/configureTheme'
+import useInitUniversalApp from 'src/utils/useInitUniversalApp'
 import Loading from 'src/components/universal/Loading'
 import AuthenticatedRouter from 'src/routes/AuthenticatedRouter'
 import UnauthenticatedRouter from 'src/routes/UnauthenticatedRouter'
 
 const UniversalRouter = ({ authenticated, subAccount, unsubAccount, setDarkMode, setScreenSize }) => {
-  useEffect(() => {
-    configureTheme(setDarkMode, setScreenSize)
-    authListener('account', subAccount)
-    return () => Promise.all([unsubAccount()])
-  }, [subAccount, unsubAccount])
+  const [initialized, setInitialized] = useState(false)
+  useInitUniversalApp({ setInitialized, setDarkMode, setScreenSize, subAccount, unsubAccount })
 
-  switch (authenticated) {
-    case 'pending':
-      return <Loading />
-    case true:
+  switch (`${initialized} | ${authenticated}`) {
+    case `true | true`:
       return <AuthenticatedRouter />
-    default:
+    case `true | false`:
       return <UnauthenticatedRouter />
+    default:
+      return <Loading />
   }
 }
 

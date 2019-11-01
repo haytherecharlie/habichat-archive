@@ -14,7 +14,7 @@ const whatSize = (width) => {
 
 const configureSizeTheme = (callback) => {
   callback(whatSize(Dimensions.get('window').width))
-  Dimensions.addEventListener('change', ({ width }) => callback(whatSize(width)))
+  return Dimensions.addEventListener('change', ({ width }) => callback(whatSize(width)))
 }
 
 const configureColorTheme = (callback) => {

@@ -9,7 +9,7 @@ import * as S from './LandingScreen.style'
 const LandingScreen = () => {
   return (
     <PageWrapper>
-      <S.First></S.First>
+      <S.First />
       <S.Second>
         <IconLogo variant="default" />
       </S.Second>
