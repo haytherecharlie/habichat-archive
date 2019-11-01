@@ -11,6 +11,7 @@ const OnboardingScreen = () => {
     <Swiper ref={swiper}>
       <S.Page>
         <S.Img source={onboardingImg1} alt="cityscape"/>
+        <S.Headline>Hello World!</S.Headline>
         <PillButton onPress={() => swiper.current.scrollBy(1)} title="Next" />
       </S.Page>
       <S.Page>

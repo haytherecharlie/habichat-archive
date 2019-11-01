@@ -10,7 +10,7 @@ export const Page = styled(View)({
 })
 
 export const Headline = styled(Text)({
-
+  fontFamily: 'habichat'
 })
 
 export const Img = styled(Image)({
