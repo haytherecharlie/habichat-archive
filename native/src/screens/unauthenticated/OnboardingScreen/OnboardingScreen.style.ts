@@ -9,10 +9,6 @@ export const Page = styled(View)({
   justifyContent: 'center'
 })
 
-export const Headline = styled(Text)({
-  fontFamily: 'habichat'
-})
-
 export const Img = styled(Image)({
   height: 300,
   width: 300
