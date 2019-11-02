@@ -14,6 +14,6 @@ export const Headline = styled(Text)({
 })
 
 export const Img = styled(Image)({
-  height: 350,
-  width: 350
+  height: 300,
+  width: 300
 })
