@@ -9,7 +9,7 @@ const PillButton = ({
   title,
   primaryColor,
   secondaryColor,
-  mediumText,
+  h3,
   veritcalSpacing,
   radius,
   navigation
@@ -27,7 +27,7 @@ const PillButton = ({
       borderRadius={radius}>
       <S.Title
         color={isDefault ? primaryColor : secondaryColor}
-        fontSize={mediumText}
+        fontSize={h3}
         padding={veritcalSpacing}>
         {title}
       </S.Title>
@@ -48,7 +48,7 @@ PillButton.propTypes = {
   title: types.string.isRequired,
   primaryColor: types.string.isRequired,
   secondaryColor: types.string.isRequired,
-  mediumText: types.string.isRequired,
+  h3: types.string.isRequired,
   veritcalSpacing: types.string.isRequired,
   radius: types.string.isRequired,
   navigation: types.object.isRequired

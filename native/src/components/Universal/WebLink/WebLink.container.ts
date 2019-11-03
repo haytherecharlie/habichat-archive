@@ -6,7 +6,7 @@ import WebLink from './WebLink.component'
 export const state = (state) => {
   return {
     darkMode: path(['theme', 'darkMode'])(state),
-    smallText: path(['theme', 'smallText'])(state),
+    h4: path(['theme', 'fontSize', 'h4'])(state),
     secondaryColor: path(['theme', 'secondaryColor'])(state)
   }
 }

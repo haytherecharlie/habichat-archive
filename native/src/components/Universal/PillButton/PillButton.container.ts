@@ -7,7 +7,7 @@ export const state = (state) => {
   return {
     primaryColor: path(['theme', 'primaryColor'])(state),
     secondaryColor: path(['theme', 'secondaryColor'])(state),
-    mediumText: path(['theme', 'mediumText'])(state),
+    h3: path(['theme', 'fontSize', 'h3'])(state),
     veritcalSpacing: path(['theme', 'veritcalSpacing'])(state),
     radius: path(['theme', 'radius'])(state)
   }

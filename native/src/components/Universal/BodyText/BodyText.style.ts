@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { View, Text } from 'react-native'
 
-export const TitleText = styled(View)({
+export const BodyText = styled(View)({
   display: 'flex',
   alignItems: 'stretch',
   justifyContent: 'center'
@@ -9,7 +9,6 @@ export const TitleText = styled(View)({
 
 export const Title = styled(Text)({
   fontSize: (p) => p.fontSize,
-  fontFamily: 'habichat',
   color: (p) => p.color,
   textAlign: (p) => p.align
 })

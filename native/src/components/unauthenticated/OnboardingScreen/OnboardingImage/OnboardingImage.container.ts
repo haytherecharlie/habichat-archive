@@ -1,10 +1,16 @@
+import { path } from 'ramda'
 import { connect } from 'react-redux'
 import OnboardingImage from './OnboardingImage.component'
 
 export const state = (state) => {
-  return {}
+  return {
+    onboardingImageDiameter: path(['theme', 'onboardingImageDiameter'])(state)
+  }
 }
 
 export const dispatch = {}
 
-export default connect(state, dispatch)(OnboardingImage)
+export default connect(
+  state,
+  dispatch
+)(OnboardingImage)

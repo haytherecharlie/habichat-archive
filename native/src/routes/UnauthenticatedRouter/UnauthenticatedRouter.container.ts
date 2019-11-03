@@ -15,7 +15,7 @@ export const Stack = createAppContainer(
       VerifyScreen,
       HomeScreen: createStackNavigator(
         { LandingScreen, OnboardingScreen },
-        { initialRouteName: 'LandingScreen', defaultNavigationOptions: { header: null } }
+        { initialRouteName: 'OnboardingScreen', defaultNavigationOptions: { header: null } }
       )
     },
     { initialRouteName: 'HomeScreen' }

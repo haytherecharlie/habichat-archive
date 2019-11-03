@@ -22,25 +22,37 @@ export const colorTheme = {
 export const sizeTheme = {
   large: {
     onboardingImageDiameter: '300px',
-    largeText: '20px',
-    mediumText: '18px',
-    smallText: '16px',
+    fontSize: {
+      h1: '28px',
+      h2: '23px',
+      h3: '18px',
+      h4: '15px',
+      h5: '12px'
+    },
     veritcalSpacing: '10px',
     radius: '25px'
   },
   medium: {
     onboardingImageDiameter: '275px',
-    largeText: '18px',
-    mediumText: '16px',
-    smallText: '14px',
+    fontSize: {
+      h1: '28px',
+      h2: '23px',
+      h3: '18px',
+      h4: '15px',
+      h5: '12px'
+    },
     veritcalSpacing: '10px',
     radius: '25px'
   },
   small: {
     onboardingImageDiameter: '250px',
-    largeText: '16px',
-    mediumText: '14px',
-    smallText: '12px',
+    fontSize: {
+      h1: '28px',
+      h2: '23px',
+      h3: '18px',
+      h4: '15px',
+      h5: '12px'
+    },
     veritcalSpacing: '10px',
     radius: '25px'
   }

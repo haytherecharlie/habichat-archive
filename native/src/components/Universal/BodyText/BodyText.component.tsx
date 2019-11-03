@@ -1,35 +1,35 @@
 import React from 'react'
 import types from 'prop-types'
-import * as S from './TitleText.style'
+import * as S from './BodyText.style'
 
-const TitleText = ({ children, variant, size, align, primaryColor, secondaryColor, fontSize }) => {
+const BodyText = ({ children, variant, size, align, primaryColor, secondaryColor, fontSize }) => {
   switch (variant) {
     case 'inverted':
       return (
-        <S.TitleText>
+        <S.BodyText>
           <S.Title align={align} fontSize={fontSize[size]} color={primaryColor}>
             {children}
           </S.Title>
-        </S.TitleText>
+        </S.BodyText>
       )
     default:
       return (
-        <S.TitleText>
+        <S.BodyText>
           <S.Title align={align} fontSize={fontSize[size]} color={secondaryColor}>
             {children}
           </S.Title>
-        </S.TitleText>
+        </S.BodyText>
       )
   }
 }
 
-TitleText.defaultProps = {
+BodyText.defaultProps = {
   variant: 'default',
   size: 'h2',
   align: 'left'
 }
 
-TitleText.propTypes = {
+BodyText.propTypes = {
   align: types.string,
   size: types.string,
   children: types.string.isRequired,
@@ -39,4 +39,4 @@ TitleText.propTypes = {
   fontSize: types.object.isRequired
 }
 
-export default TitleText
+export default BodyText

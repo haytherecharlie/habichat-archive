@@ -1,15 +1,37 @@
 import styled from 'styled-components'
-import { View, Text, Image } from 'react-native'
+import { View } from 'react-native'
 
-export const Page = styled(View)({
+export const First = styled(View)({
   flex: 1,
+  display: 'flex'
+})
+
+export const Second = styled(View)({
+  flex: 2,
   display: 'flex',
-  flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center'
 })
 
-export const Img = styled(Image)({
-  height: 300,
-  width: 300
+export const Third = styled(View)({
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
+})
+
+export const Fourth = styled(View)({
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-around',
+  maxWidth: '300px',
+  margin: 'auto'
+})
+
+export const Fifth = styled(View)({
+  flex: 1,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
 })

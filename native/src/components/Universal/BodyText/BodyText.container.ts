@@ -1,6 +1,6 @@
 import { path } from 'ramda'
 import { connect } from 'react-redux'
-import TitleText from './TitleText.component'
+import BodyText from './BodyText.component'
 
 export const state = (state) => {
   return {
@@ -15,4 +15,4 @@ export const dispatch = {}
 export default connect(
   state,
   dispatch
-)(TitleText)
+)(BodyText)

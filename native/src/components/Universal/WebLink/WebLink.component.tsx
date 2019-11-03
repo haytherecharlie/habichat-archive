@@ -4,12 +4,12 @@ import { Linking } from 'react-native'
 import { openBrowserAsync } from 'expo-web-browser'
 import * as S from './WebLink.style'
 
-const WebLink = ({ secondaryColor, smallText, children, href, darkMode }) => {
+const WebLink = ({ secondaryColor, h4, children, href, darkMode }) => {
   const openBrowserLink = async () => await openBrowserAsync(`${href}?dm=${darkMode}`)
 
   return (
     <S.WebLink onPress={openBrowserLink}>
-      <S.Title fontSize={smallText} color={secondaryColor}>
+      <S.Title fontSize={h4} color={secondaryColor}>
         {children}
       </S.Title>
     </S.WebLink>
@@ -20,7 +20,7 @@ WebLink.propTypes = {
   darkMode: types.bool.isRequired,
   secondaryColor: types.string.isRequired,
   children: types.node.isRequired,
-  smallText: types.string.isRequired,
+  h4: types.string.isRequired,
   href: types.string.isRequired
 }
 
