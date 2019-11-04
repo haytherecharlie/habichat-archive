@@ -44,7 +44,7 @@ const EmailInput = ({
       <S.EmailInput
         primaryColor={secondaryColor}
         placeholder="Please enter your email address"
-        placeholderTextColor={secondaryColor}
+        placeholderTextColor="#CCCCCC"
         onChangeText={onChange}
         value={email}
         autoCapitalize="none"
