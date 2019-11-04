@@ -1,18 +1,21 @@
 import React, { useRef } from 'react'
 import types from 'prop-types'
 import Swiper from 'react-native-swiper'
+import onboardingImg1 from 'src/assets/images/onboarding-1.png'
+import onboardingImg2 from 'src/assets/images/onboarding-2.png'
+import onboardingImg3 from 'src/assets/images/onboarding-3.png'
 import PageWrapper from 'src/components/universal/PageWrapper'
 import TitleText from 'src/components/universal/TitleText'
 import BodyText from 'src/components/universal/BodyText'
-import onboardingImg1 from 'src/assets/images/onboarding-1.png'
 import OnboardingImage from 'src/components/unauthenticated/OnboardingScreen/OnboardingImage'
 import PillButton from 'src/components/universal/PillButton'
 import * as S from './OnboardingScreen.style'
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({ navigation }) => {
   const swiper = useRef(null)
   return (
     <Swiper ref={swiper}>
+      {/* Page One */}
       <PageWrapper>
         <S.First />
         <S.Second>
@@ -35,9 +38,49 @@ const OnboardingScreen = () => {
           <PillButton onPress={() => swiper.current.scrollBy(1)} title="Next" />
         </S.Fifth>
       </PageWrapper>
-      {/* <PageWrapper>
-        <PillButton onPress={() => swiper.current.scrollBy(1)} title="Page 2" />
-      </PageWrapper> */}
+      {/* Page Two */}
+      <PageWrapper>
+        <S.First />
+        <S.Second>
+          <OnboardingImage source={onboardingImg2} alt="neighbors" />
+        </S.Second>
+        <S.Third>
+          <TitleText align="center" size="h1">
+            Neighbors Make Life Better!
+          </TitleText>
+        </S.Third>
+        <S.Fourth>
+          <BodyText align="center" size="h3">
+            Find dog walkers, babysitters, build a sports team, sell your stuff.
+          </BodyText>
+          <BodyText align="center" size="h3">
+            There’s so much more going on in your building than you realize.
+          </BodyText>
+        </S.Fourth>
+        <S.Fifth>
+          <PillButton onPress={() => swiper.current.scrollBy(1)} title="Next" />
+        </S.Fifth>
+      </PageWrapper>
+      {/* Page Three */}
+      <PageWrapper>
+        <S.First />
+        <S.Second>
+          <OnboardingImage source={onboardingImg3} alt="privacy" />
+        </S.Second>
+        <S.Third>
+          <TitleText align="center" size="h1">
+            No Akward Encounters.
+          </TitleText>
+        </S.Third>
+        <S.Fourth>
+          <BodyText align="center" size="h3">
+            No one likes an akward elevator ride, so share as much or as little about yourself as you’d like. We care about your privacy.
+          </BodyText>
+        </S.Fourth>
+        <S.Fifth>
+          <PillButton onPress={() => navigation.navigate('EmailScreen')} title="Sign In / Register" />
+        </S.Fifth>
+      </PageWrapper>
     </Swiper>
   )
 }

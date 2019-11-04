@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { withNavigation } from 'react-navigation'
 import OnboardingScreen from './OnboardingScreen.component'
 
 export const state = (state) => {
@@ -10,4 +11,4 @@ export const dispatch = {}
 export default connect(
   state,
   dispatch
-)(OnboardingScreen)
+)(withNavigation(OnboardingScreen))

@@ -12,7 +12,7 @@ const useInitUniversalApp = ({ setInitialized, setDarkMode, setScreenSize, subAc
   }, [subAccount, unsubAccount])
 
   const runInitialization = async () => {
-    await Promise.all(configureTheme(setDarkMode, setScreenSize), loadAsync({ habichat: habichatFont }))
+    await Promise.all(await configureTheme(setDarkMode, setScreenSize), await loadAsync({ habichat: habichatFont }))
     return setInitialized(true)
   }
 }
