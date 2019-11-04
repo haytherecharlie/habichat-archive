@@ -4,6 +4,7 @@ import { View } from 'react-native'
 export const First = styled(View)({
   flex: 1,
   display: 'flex'
+  // border: `1px solid yellow`
 })
 
 export const Second = styled(View)({
@@ -11,6 +12,7 @@ export const Second = styled(View)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center'
+  // border: `1px solid orange`
 })
 
 export const Third = styled(View)({
@@ -18,6 +20,7 @@ export const Third = styled(View)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center'
+  // border: `1px solid green`
 })
 
 export const Fourth = styled(View)({
@@ -27,11 +30,14 @@ export const Fourth = styled(View)({
   justifyContent: 'space-around',
   maxWidth: '300px',
   margin: 'auto'
+  // border: `1px solid blue`
 })
 
 export const Fifth = styled(View)({
   flex: 1,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'flex-start',
+  paddingTop: 30
+  // border: `1px solid purple`
 })
