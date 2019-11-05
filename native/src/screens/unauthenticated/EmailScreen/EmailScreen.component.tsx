@@ -10,8 +10,8 @@ const EmailScreen = ({ loading, stopLoading }) => {
   }, [])
 
   return (
-    <PageWrapper loading={loading} text="Fetching user information..." >
-      <TitleText size="h1">Enter Your Email</TitleText>
+    <PageWrapper loading={loading} background="fade" text="Fetching user information..." >
+      <TitleText size="h1">What's Your Email Address?</TitleText>
       <EmailInput />
     </PageWrapper>
   )

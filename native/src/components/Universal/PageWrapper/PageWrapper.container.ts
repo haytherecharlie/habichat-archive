@@ -4,7 +4,8 @@ import PageWrapper from './PageWrapper.component'
 
 export const state = (state) => {
   return {
-    primaryColor: path(['theme', 'primaryColor'])(state)
+    primaryColor: path(['theme', 'primaryColor'])(state),
+    darkMode: path(['theme', 'darkMode'])(state)
   }
 }
 
