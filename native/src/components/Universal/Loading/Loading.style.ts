@@ -6,7 +6,7 @@ export const Loading = styled(View)({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: (p) => p.backgroundColor
+  background: 'transparent'
 })
 
 export const LoadingText = styled(Text)({

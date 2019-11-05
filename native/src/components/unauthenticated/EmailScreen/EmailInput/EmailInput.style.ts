@@ -5,7 +5,7 @@ export const Wrapper = styled(View)({
   marginTop: '10px',
   borderBottomWidth: `1px`,
   borderBottomColor: (p) => p.borderColor,
-  padding: '10px 0px'
+  width: '100%'
 })
 export const ErrorMsg = styled(Text)({
   color: 'red'

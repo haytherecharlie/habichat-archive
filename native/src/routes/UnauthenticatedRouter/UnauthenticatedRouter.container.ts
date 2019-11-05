@@ -18,7 +18,7 @@ export const Stack = createAppContainer(
         { initialRouteName: 'LandingScreen', defaultNavigationOptions: { header: null } }
       )
     },
-    { initialRouteName: 'EmailScreen' }
+    { initialRouteName: 'HomeScreen' }
   )
 )
 

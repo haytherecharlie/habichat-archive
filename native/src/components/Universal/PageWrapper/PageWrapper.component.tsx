@@ -24,7 +24,7 @@ const PageWrapper = ({ darkMode, children, primaryColor, loading, text, backgrou
     default:
       return (
         <S.PageWrapper backgroundColor={primaryColor} behavior="padding" enabled>
-          {loading ? <Loading text={text} /> : children}
+          <S.Padding>{loading ? <Loading text={text} /> : children}</S.Padding>
         </S.PageWrapper>
       )
   }

@@ -8,7 +8,7 @@ export const First = styled(View)({
 })
 
 export const Second = styled(View)({
-  flex: 1,
+  flex: 2,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -16,10 +16,10 @@ export const Second = styled(View)({
 })
 
 export const Third = styled(View)({
-  flex: 1,
+  flex: 2,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'flex-start',
+  justifyContent: 'center',
   // border: `1px solid green`
 })
 
@@ -32,7 +32,7 @@ export const Fourth = styled(View)({
 })
 
 export const Fifth = styled(View)({
-  flex: 1,
+  flex: 2,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-start',
