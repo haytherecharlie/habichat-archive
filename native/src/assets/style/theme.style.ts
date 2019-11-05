@@ -23,7 +23,7 @@ export const sizeTheme = {
   large: {
     onboardingImageDiameter: '300px',
     fontSize: {
-      h1: '28px',
+      h1: '34px',
       h2: '23px',
       h3: '18px',
       h4: '15px',

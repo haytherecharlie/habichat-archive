@@ -7,7 +7,8 @@ import EmailInput from './EmailInput.component'
 export const state = (state) => {
   return {
     primaryColor: path(['theme', 'primaryColor'])(state),
-    secondaryColor: path(['theme', 'secondaryColor'])(state)
+    secondaryColor: path(['theme', 'secondaryColor'])(state),
+    fontSize: path(['theme', 'fontSize'])(state)
   }
 }
 

@@ -4,14 +4,7 @@ import { callEmailFunction } from 'src/services/firebase'
 import { validateEmail } from 'src/utils/validate'
 import * as S from './EmailInput.style'
 
-const EmailInput = ({
-  navigation,
-  primaryColor,
-  secondaryColor,
-  preserveEmail,
-  startLoading,
-  stopLoading
-}) => {
+const EmailInput = ({ navigation, primaryColor, secondaryColor, preserveEmail, startLoading, stopLoading, fontSize }) => {
   const [email, onChange] = useState('')
   const [error, toggleError] = useState(false)
 
@@ -21,7 +14,7 @@ const EmailInput = ({
       await callEmailFunction(email)
       preserveEmail(email)
       navigation.navigate('VerifyScreen')
-      return setTimeout(() => stopLoading('emailScreen'), 1000)
+      return setTimeout(() => stopLoading('emailScreen'), 3000)
     } catch (err) {
       stopLoading('emailScreen')
       return toggleError('Error connecting to API.')
@@ -40,11 +33,12 @@ const EmailInput = ({
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper borderColor={secondaryColor}>
       <S.EmailInput
         primaryColor={secondaryColor}
         placeholder="Please enter your email address"
-        placeholderTextColor="#CCCCCC"
+        placeholderTextColor={secondaryColor}
+        fontSize={fontSize['h3']}
         onChangeText={onChange}
         value={email}
         autoCapitalize="none"
@@ -68,7 +62,8 @@ EmailInput.propTypes = {
   navigation: types.object.isRequired,
   preserveEmail: types.func.isRequired,
   startLoading: types.func.isRequired,
-  stopLoading: types.func.isRequired
+  stopLoading: types.func.isRequired,
+  fontSize: types.object.isRequired
 }
 
 export default EmailInput
