@@ -5,7 +5,7 @@ import { validateEmail } from 'src/utils/validate'
 import * as S from './EmailInput.style'
 
 const EmailInput = ({ navigation, primaryColor, secondaryColor, preserveEmail, startLoading, stopLoading, fontSize }) => {
-  const [email, onChange] = useState('')
+  const [email, setEmail] = useState('')
   const [error, toggleError] = useState(false)
 
   const submitEmail = async () => {
@@ -22,13 +22,20 @@ const EmailInput = ({ navigation, primaryColor, secondaryColor, preserveEmail, s
   }
 
   const checkEmail = () => {
-    return validateEmail(email) ? submitEmail() : toggleError('Please enter a valid email address.')
+    if (validateEmail(email)) {
+      submitEmail()
+    } else {
+      setEmail('')
+      toggleError('Please enter a valid email address.')
+    }
   }
 
-  const reselectInput = () => {
+  const handleChangeText = (text) => {
     if (error) {
       toggleError(false)
-      onChange('')
+      setEmail('')
+    } else {
+      setEmail(text)
     }
   }
 
@@ -37,18 +44,18 @@ const EmailInput = ({ navigation, primaryColor, secondaryColor, preserveEmail, s
       <S.EmailInput
         primaryColor={secondaryColor}
         placeholder="Please enter your email address"
-        placeholderTextColor={secondaryColor}
-        fontSize={fontSize['h3']}
-        onChangeText={onChange}
+        placeholderTextColor="#888"
+        fontSize={fontSize}
+        onChangeText={handleChangeText}
         value={email}
         autoCapitalize="none"
         autoCompleteType="email"
         autoCorrect={false}
         autoFocus={true}
         blurOnSubmit={true}
-        onFocus={reselectInput}
         enablesReturnKeyAutomatically={true}
         keyboardType="email-address"
+        blurOnSubmit={false}
         onSubmitEditing={checkEmail}
       />
       {error && <S.ErrorMsg>{error}</S.ErrorMsg>}
@@ -63,7 +70,7 @@ EmailInput.propTypes = {
   preserveEmail: types.func.isRequired,
   startLoading: types.func.isRequired,
   stopLoading: types.func.isRequired,
-  fontSize: types.object.isRequired
+  fontSize: types.string.isRequired
 }
 
 export default EmailInput

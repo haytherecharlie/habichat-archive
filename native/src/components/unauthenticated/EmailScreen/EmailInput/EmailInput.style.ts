@@ -12,5 +12,6 @@ export const ErrorMsg = styled(Text)({
 })
 
 export const EmailInput = styled(TextInput)({
-  color: (p) => p.primaryColor
+  color: (p) => p.primaryColor,
+  fontSize: p => p.fontSize
 })

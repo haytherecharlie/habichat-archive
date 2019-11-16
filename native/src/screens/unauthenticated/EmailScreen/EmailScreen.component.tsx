@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import types from 'prop-types'
 import TitleText from 'src/components/universal/TitleText'
 import PageWrapper from 'src/components/universal/PageWrapper'
