@@ -6,12 +6,30 @@ import morgan from 'morgan'
 import parser from 'body-parser'
 import routes from 'src/routes'
 
-export const app = express()
-export const port = 4000
+interface App {
+  use: (middleware) => void,
+  listen: (port: number, cb: () => void) => void
+}
 
-app.use(cors())
-app.use(parser.json({ type: 'application/json' }))
-app.use(morgan('dev'))
-app.use(routes)
+class Server {
+  app: App = express()
+  port: number = 4000
 
-app.listen(port, () => console.log(`Habichat Server: http://localhost:${port}`))
+  constructor() {
+    this.useMiddlewares()
+    this.startApp()
+  }
+
+  useMiddlewares = () => {
+    this.app.use(cors())
+    this.app.use(parser.json({ type: 'this.application/json' }))
+    this.app.use(morgan('dev'))
+    this.app.use(routes)
+  }
+
+  startApp = () => {
+    this.app.listen(this.port, () => console.log(`Habichat Server: http://localhost:${this.port}`))
+  }
+}
+
+export default new Server()
