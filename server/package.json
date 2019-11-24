@@ -10,7 +10,8 @@
     "dev": "NODE_ENV=development ts-node-dev src/index.ts",
     "kill": "kill $(lsof -t -i :8080)",
     "lint": "eslint ./src/**/*.ts",
-    "mongo": "mongod"
+    "mongo": "mongod",
+    "serve": "tsc src/index.ts --watch && nodemon build"
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
@@ -30,7 +31,11 @@
     "ramda": "^0.26.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.6",
     "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.32",
+    "@types/mongoose-unique-validator": "^1.0.3",
+    "@types/morgan": "^1.7.37",
     "@types/node": "^12.12.8",
     "@typescript-eslint/parser": "^2.7.0",
     "eslint": "^6.6.0",

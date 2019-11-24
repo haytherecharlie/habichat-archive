@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Messages = styled('div')({
+export const MessagesList = styled('div')({
   flex: 1,
   display: 'flex',
   alignItems: 'center',

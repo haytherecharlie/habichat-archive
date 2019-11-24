@@ -3,7 +3,7 @@ export const postOptions = (body) => ({
   body,
   headers: {
     'Content-type': 'application/json',
-    Accept: 'application/json'
+    'Accept': 'application/json'
   }
 })
 
@@ -11,6 +11,6 @@ export const getOptions = () => ({
   method: 'GET',
   headers: {
     'Content-type': 'application/json',
-    Accept: 'application/json'
+    'Accept': 'application/json'
   }
 })

@@ -1,18 +1,13 @@
 import 'module-alias/register'
 import 'src/services/mongo'
-import express from 'express'
+import express, { Application } from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
 import parser from 'body-parser'
 import routes from 'src/routes'
 
-interface App {
-  use: (middleware) => void,
-  listen: (port: number, cb: () => void) => void
-}
-
-class Server {
-  app: App = express()
+class HabichatServer {
+  app: Application = express()
   port: number = 4000
 
   constructor() {
@@ -22,7 +17,7 @@ class Server {
 
   useMiddlewares = () => {
     this.app.use(cors())
-    this.app.use(parser.json({ type: 'this.application/json' }))
+    this.app.use(parser.json())
     this.app.use(morgan('dev'))
     this.app.use(routes)
   }
@@ -32,4 +27,4 @@ class Server {
   }
 }
 
-export default new Server()
+export default new HabichatServer()

@@ -6,7 +6,7 @@ const CommunitiesList = ({ activeCommunity, setActiveCommunity }) => {
   const [communities, setCommunities] = useState([])
   const fetchCommunities = async () => {
     try {
-      const req = await fetch('http://localhost:4000/communities/20', getOptions())
+      const req = await fetch('http://localhost:4000/communities/fetch/20', getOptions())
       const { data } = await req.json()
       setCommunities(data)
     } catch (err) {
@@ -24,7 +24,7 @@ const CommunitiesList = ({ activeCommunity, setActiveCommunity }) => {
 
   return (
     <S.CommunitiesList>
-      <div>{activeCommunity}</div>
+      <div>{activeCommunity || 'Select a Community'}</div>
       <ul>
         {communities.map(({ name, _id }) => (
           <button onClick={() => setActiveCommunity(_id)} key={name}>{name}</button>

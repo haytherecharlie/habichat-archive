@@ -1,5 +1,4 @@
-import { connect } from 'mongoose'
-import { config } from 'dotenv'
+import mongoose from 'mongoose'
 
 class Mongo {
   constructor() {
@@ -15,8 +14,7 @@ class Mongo {
 
   startMongo = async () => {
     try {
-      config()
-      await connect(process.env.MONGO_URL, this.options)
+      await mongoose.connect('mongodb://127.0.0.1/habichat', this.options)
       return console.log('MongoDb Connected!')
     } catch (err) {
       return console.log('No MongoDb Running!')
