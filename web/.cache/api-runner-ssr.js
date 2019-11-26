@@ -5,6 +5,9 @@ var plugins = [{
       plugin: require('/Users/haytrix/Documents/haytherecharlie/habichat/web/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('/Users/haytrix/Documents/haytherecharlie/habichat/web/node_modules/gatsby-plugin-react-redux/gatsby-ssr'),
+      options: {"plugins":[],"pathToCreateStoreModule":"/Users/haytrix/Documents/haytherecharlie/habichat/web/src/services/redux","serialize":{"space":0,"isJSON":true,"unsafe":false}},
+    },{
       plugin: require('/Users/haytrix/Documents/haytherecharlie/habichat/web/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/assets/images/gatsby-icon.png"},
     }]

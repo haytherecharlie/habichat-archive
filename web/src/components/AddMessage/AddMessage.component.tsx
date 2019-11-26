@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import slug from 'slug'
+import { useSelector } from 'react-redux'
 import { postOptions } from 'src/utils/options'
 import * as S from './AddMessage.style'
 
-const AddMessage = ({ user, community }) => {
+const AddMessage = () => {
+  const { community, user } = useSelector((state) => state)
   const [message, setMessage] = useState('')
 
   const updateMessage = ({ target }) => {

@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { SET_COMMUNITY } from 'src/services/redux'
 import { getOptions } from 'src/utils/options'
 import * as S from './CommunitiesList.style'
 
-const CommunitiesList = ({ activeCommunity, setActiveCommunity }) => {
+const CommunitiesList = () => {
+  const dispatch = useDispatch()
+  const { community } = useSelector((state) => state)
   const [communities, setCommunities] = useState([])
   const fetchCommunities = async () => {
     try {
@@ -24,10 +28,12 @@ const CommunitiesList = ({ activeCommunity, setActiveCommunity }) => {
 
   return (
     <S.CommunitiesList>
-      <div>{activeCommunity || 'Select a Community'}</div>
+      <div>{community || 'Select a Community'}</div>
       <ul>
         {communities.map(({ name, _id }) => (
-          <button onClick={() => setActiveCommunity(_id)} key={name}>{name}</button>
+          <button onClick={() => dispatch({ type: SET_COMMUNITY, value: _id })} key={name}>
+            {name}
+          </button>
         ))}
       </ul>
     </S.CommunitiesList>

@@ -5,12 +5,10 @@ import * as S from './PageWrapper.style'
 
 const PageWrapper = ({ children }) => {
   return (
-    <Fragment>
+    <S.PageWrapper>
       <GlobalStyle />
-      <S.PageWrapper>
-        <S.PageContent>{children}</S.PageContent>
-      </S.PageWrapper>
-    </Fragment>
+      {children}
+    </S.PageWrapper>
   )
 }
 

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { getOptions } from 'src/utils/options'
 import * as S from './MessagesList.style'
 
-const MessagesList = ({ community }) => {
+const MessagesList = () => {
+  const { community } = useSelector((state) => state)
+  const [prevCommunity, setPrevCommunity] = useState(null)
   const [messages, setMessages] = useState([])
   const fetchMessages = async () => {
     try {
@@ -15,17 +18,11 @@ const MessagesList = ({ community }) => {
   }
 
   useEffect(() => {
-    console.log(community)
-    if (community) {
-      fetchMessages()
-      const logData = (e) => {
-        console.log(`new message`)
-        setMessages((prev) => [...prev, JSON.parse(e.data)])
-      }
-      const listener = new EventSource(`http://localhost:4000/messages/stream/${community}`)
-      listener.addEventListener('event', logData, false)
-      return () => listener.removeEventListener('event', logData, false)
-    }
+    fetchMessages()
+    const logData = (e) => setMessages((prev) => [...prev, JSON.parse(e.data)])
+    const listener = new EventSource(`http://localhost:4000/messages/stream/${community}`)
+    listener.addEventListener('event', logData, false)
+    return () => listener.removeEventListener('event', logData, false)
   }, [community])
 
   return (

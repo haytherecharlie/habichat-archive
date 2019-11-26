@@ -8,25 +8,23 @@ import CommunitiesList from 'src/components/CommunitiesList'
 import * as S from './Home.style'
 
 const IndexPage = () => {
-  const [user, setUser] = useState({ name: 'Charlie', id: 1234 })
-  const [activeCommunity, setActiveCommunity] = useState('5dd0ce8d65b721b23455e24a')
   return (
     <PageWrapper>
       <S.Row>
         <S.Col>
-          <DisplayUser user={user} />
-          <AddCommunity user={user} />
+          <DisplayUser />
+          <AddCommunity />
         </S.Col>
         <S.Col>
-          <CommunitiesList activeCommunity={activeCommunity} setActiveCommunity={setActiveCommunity} />
+          <CommunitiesList />
         </S.Col>
       </S.Row>
       <S.Row>
         <S.Col>
-          <AddMessage community={activeCommunity} user={user} />
+          <AddMessage />
         </S.Col>
         <S.Col>
-          <MessagesList community={activeCommunity} />
+          <MessagesList />
         </S.Col>
       </S.Row>
     </PageWrapper>

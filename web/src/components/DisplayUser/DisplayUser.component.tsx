@@ -1,8 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import * as S from './DisplayUser.style'
 
-const DisplayUser = ({ user }) => {
-  const { id, name } = user
+const DisplayUser = () => {
+  const { id, name } = useSelector((s) => s.user)
   return (
     <S.DisplayUser>
       <S.Title>{id}</S.Title>
