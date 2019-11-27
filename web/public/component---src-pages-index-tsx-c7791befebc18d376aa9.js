@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{QeBL:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),u=t("jN5L");n.default=function(){return c.a.createElement(u.a,null,c.a.createElement("div",null,"Habichat"))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-c7791befebc18d376aa9.js.map

@@ -2,7 +2,7 @@ const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/components/BlogPost/BlogPost.component.tsx`)
+  const blogPostTemplate = path.resolve(`src/pages/_blogpost.tsx`)
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
@@ -29,16 +29,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-exports.onCreatePage = ({ page, actions }) => {
-  const { deletePage, createPage } = actions
-  return new Promise((resolve) => {
-    if (page.componentPath === `${__dirname}/src/pages/Home/index.tsx`) {
-      deletePage(page)
-      createPage({
-        ...page,
-        path: '/'
-      })
-    }
-    resolve()
-  })
-}
+// exports.onCreatePage = ({ page, actions }) => {
+//   const { deletePage } = actions
+//   return new Promise((resolve) => {
+//     if (page.componentPath === `${__dirname}/src/pages/blogpost.tsx`)
+//       deletePage(page)
+//     resolve()
+//   })
+// }
