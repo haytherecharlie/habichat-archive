@@ -1,16 +1,15 @@
 import { Router } from 'express'
-import community from 'src/controllers/community'
-import communites from 'src/controllers/communities'
-import message from 'src/controllers/message'
-import messages from 'src/controllers/messages'
+import Community from 'src/controllers/Community'
+import Message from 'src/controllers/Message'
 
 const routes = Router()
 
-routes.post('/community', community.POST)
-routes.get('/communities/stream', communites.SUBSCRIBE)
-routes.get('/communities/fetch/:limit', communites.GET)
-routes.post('/message', message.POST)
-routes.get('/messages/stream/:community', messages.SUBSCRIBE)
-routes.get('/messages/fetch/:community/:limit', messages.GET)
+routes.get('/community/read/multiple', Community.multiple)
+routes.get('/community/read/stream', Community.stream)
+routes.post('/community/create/new', Community.new)
+
+routes.get('/message/read/multiple', Message.multiple)
+routes.get('/message/read/stream', Message.stream)
+routes.post('/message/create/new', Message.new)
 
 export default routes

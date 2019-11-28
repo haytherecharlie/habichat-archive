@@ -1,17 +1,2 @@
-export const emailFunction =
-  __DEV__
-    ? { url: 'http://localhost:5000/habichat-75c78/us-central1/api/signin/email', method: 'POST' }
-    :
-  {
-    url: 'https://us-central1-habichat-75c78.cloudfunctions.net/api/signin/email',
-    method: 'POST'
-  }
-
-export const verifyFunction =
-  __DEV__
-    ? { url: 'http://localhost:5000/habichat-75c78/us-central1/api/signin/verify', method: 'POST' }
-    :
-  {
-    url: 'https://us-central1-habichat-75c78.cloudfunctions.net/api/signin/verify',
-    method: 'POST'
-  }
+export const MESSAGE_READ_STREAM_URL = `http://localhost:4000/message/read/stream?community=5dd0ce8d65b721b23455e24a`
+export const MESSAGE_READ_MULTIPLE_URL = `http://localhost:4000/message/read/multiple?limit=50&community=5dd0ce8d65b721b23455e24a`

@@ -10,10 +10,10 @@ const UniversalRouter = ({ authenticated, subAccount, unsubAccount, setDarkMode,
   useInitUniversalApp({ setInitialized, setDarkMode, setScreenSize, subAccount, unsubAccount })
 
   switch (`${initialized} | ${authenticated}`) {
-    case `true | true`:
-      return <AuthenticatedRouter />
+    // case `true | true`:
+      // return
     case `true | false`:
-      return <UnauthenticatedRouter />
+      return <AuthenticatedRouter />
     default:
       return <Loading />
   }

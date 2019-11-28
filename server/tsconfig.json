@@ -8,6 +8,7 @@
     "sourceMap": true,
     "outDir": "./build",
     "strict": true,
+    "strictNullChecks": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]

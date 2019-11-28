@@ -12,9 +12,9 @@ export const Stack = createAppContainer(
   createStackNavigator(
     { CommunityScreen, PostScreen, ProfileScreen },
     {
-      initialRouteName: 'CommunityScreen',
+      initialRouteName: 'PostScreen',
       defaultNavigationOptions: {
-        header: null
+        // header: null
       }
     }
   )
