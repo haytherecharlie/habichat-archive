@@ -1,5 +1,3 @@
-import { unsubscribe } from 'src/services/firebase'
-
 const PRESERVE_EMAIL = 'PRESERVE_EMAIL'
 const SUBSCRIBE_ACCOUNT = 'SUBSCRIBE_ACCOUNT'
 const UNSUBSCRIBE_ACCOUNT = 'UNSUBSCRIBE_ACCOUNT'

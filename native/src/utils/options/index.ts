@@ -1,12 +1,16 @@
-const options = (method, more) => ({
-  mode: 'cors',
-  method,
+export const postOptions = (body) => ({
+  method: 'POST',
+  body,
   headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzAyMjgwNTJ9.dOnJtiNbZTsGKxms4DC30EocvTY4XgoWOnLq-bKl23Q"
-  },
-  ...more
+    'Content-type': 'application/json',
+    'Accept': 'application/json'
+  }
 })
 
-export default options
+export const getOptions = () => ({
+  method: 'GET',
+  headers: {
+    'Content-type': 'application/json',
+    'Accept': 'application/json'
+  }
+})

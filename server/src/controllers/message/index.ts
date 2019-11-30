@@ -7,7 +7,9 @@ import SSE from 'src/utils/sse'
 type newBody = {
   message: string | undefined
   author: string | undefined
-  timestamp: number | undefined
+}
+
+type newQuery = {
   community: string | undefined
 }
 
@@ -24,7 +26,9 @@ class Message {
   // Post a new message to community.
   public new = async (req: Request, res: Response) => {
     try {
-      const { message, author, timestamp, community }: newBody = req.body
+      const { community }: newQuery = req.query
+      const { message, author }: newBody = req.body
+      const timestamp = new Date().getTime()
       const newMessage = new MessageModel({ timestamp, author, message, community })
       await Promise.all([newMessage.save(), SSE.publish(`${community}-${newMessageEvent}`, newMessage)])
       return res.status(200).json({ message: 'Message saved to database', data: newMessage })

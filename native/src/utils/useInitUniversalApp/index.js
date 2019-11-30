@@ -1,15 +1,12 @@
 import { useEffect } from 'react'
-import { authListener } from 'src/services/firebase'
 import habichatFont from 'src/assets/fonts/habichat.otf'
 import configureTheme from 'src/utils/configureTheme'
 import { loadAsync } from 'expo-font'
 
-const useInitUniversalApp = ({ setInitialized, setDarkMode, setScreenSize, subAccount, unsubAccount }) => {
+const useInitUniversalApp = ({ setInitialized, setDarkMode, setScreenSize }) => {
   useEffect(() => {
     runInitialization()
-    authListener('account', subAccount)
-    return () => Promise.all([unsubAccount()])
-  }, [subAccount, unsubAccount])
+  }, [])
 
   const runInitialization = async () => {
     await Promise.all(await configureTheme(setDarkMode, setScreenSize), await loadAsync({ habichat: habichatFont }))
