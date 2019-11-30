@@ -7,7 +7,7 @@
   "license": "UNLICENCED",
   "scripts": {
     "build": "NODE_ENV=production tsc",
-    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
+    "dev": "tsc --watch | nodemon build",
     "kill": "kill $(lsof -t -i :8080)",
     "lint": "eslint ./src/**/*.ts",
     "mongo": "mongod",
@@ -50,7 +50,7 @@
     "typescript": "^3.7.2"
   },
   "_moduleAliases": {
-    "src": "src"
+    "src": "build"
   },
   "repository": {
     "type": "git",
