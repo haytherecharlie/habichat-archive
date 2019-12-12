@@ -28,8 +28,7 @@ class Message {
     try {
       const { community }: newQuery = req.query
       const { message, author }: newBody = req.body
-      const timestamp = new Date().getTime()
-      const newMessage = new MessageModel({ timestamp, author, message, community })
+      const newMessage = new MessageModel({ author, message, community })
       await Promise.all([newMessage.save(), SSE.publish(`${community}-${newMessageEvent}`, newMessage)])
       return res.status(200).json({ message: 'Message saved to database', data: newMessage })
     } catch (err) {
