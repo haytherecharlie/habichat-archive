@@ -1,10 +1,10 @@
 import 'module-alias/register'
-import 'src/services/mongo'
+import 'services/Mongo'
 import express, { Application } from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
 import parser from 'body-parser'
-import routes from 'src/routes'
+import { routes } from 'routes/Router'
 
 class HabichatServer {
   app: Application = express()

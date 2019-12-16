@@ -2,7 +2,11 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "src/*": ["./*"],
+      "config/*": ["config/*"],
+      "controllers/*": ["controllers/*"],
+      "routes/*": ["routes/*"],
+      "services/*": ["services/*"],
+      "utils/*": ["utils/*"]
     },
     "module": "commonjs",
     "esModuleInterop": true,

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import EventEmitter from 'eventemitter3'
 
-class SSE {
+class Event {
   private emitter = new EventEmitter()
 
   public publish = (key: string, value: object) => {
@@ -34,4 +34,4 @@ class SSE {
   }
 }
 
-export default new SSE()
+export default new Event()

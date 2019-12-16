@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import CommunityModel from 'src/services/mongo/Community'
-import { newCommunityEvent } from 'src/constants'
-import SSE from 'src/utils/sse'
+import CommunityModel from 'services/mongo/Community'
+import { newCommunityEvent } from 'config/constants'
+import Event from 'utils/Event'
 
 type newBody = {
   name: string | undefined
@@ -15,12 +15,12 @@ type multipleQuery = {
 
 class Community {
   // Post a new community.
-  public new = async (req: Request, res: Response) => {
+  public create = async (req: Request, res: Response) => {
     try {
       const { name, founder, slug }: newBody = req.body
       const created = new Date().getTime()
       const community = new CommunityModel({ created, name, founder, slug })
-      await Promise.all([community.save(), SSE.publish(newCommunityEvent, community)])
+      await Promise.all([community.save(), Event.publish(newCommunityEvent, community)])
       return res.status(200).json({ message: 'Community saved to database.', data: community })
     } catch (err) {
       console.log(err)
@@ -29,7 +29,7 @@ class Community {
   }
 
   // Get multiple communities.
-  public multiple = async (req: Request, res: Response) => {
+  public read = async (req: Request, res: Response) => {
     try {
       const { limit = '50' }: multipleQuery = req.query
       const communities = await CommunityModel.find().limit(parseInt(limit, 10))
@@ -42,7 +42,7 @@ class Community {
 
   // Stream communities.
   public stream = (req: Request, res: Response) => {
-    return SSE.subscribe(req, res, newCommunityEvent)
+    return Event.subscribe(req, res, newCommunityEvent)
   }
 }
 
