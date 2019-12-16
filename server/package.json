@@ -8,7 +8,7 @@
   "scripts": {
     "build": "NODE_ENV=production tsc && cp ./package.json ./build",
     "deploy": "rsync -avz -e 'ssh' ./build/. root@159.203.31.24:~/ ",
-    "dev": "tsc --watch | nodemon build",
+    "dev": "npm run mongo | tsc --watch | nodemon build",
     "kill": "kill $(lsof -t -i :8080)",
     "lint": "eslint ./src/**/*.ts",
     "mongo": "mongod",
