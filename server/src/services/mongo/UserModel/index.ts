@@ -8,7 +8,7 @@ class UserModel {
     interests: { type: [String], required: false },
     name: { type: String, required: false },
     picture: { type: String, required: false },
-    statusCd: { type: String, enum: ['A', 'C', 'P', 'D'], required: true}
+    statusCd: { type: String, enum: ['A', 'C', 'P', 'D'], required: true }
   }, { collection: 'users', timestamps: true }).plugin(validator))
 
   public create = async (email: String) => {
@@ -17,15 +17,15 @@ class UserModel {
       if (user) return user
       const newUser = new this.Model({ email, statusCd: 'P' })
       return await newUser.save()
-    } catch(err) {
+    } catch (err) {
       throw Error(err.message)
     }
   }
 
-  private read = async (email: String) => {
+  private read = async ({ _id, email }) => {
     try {
-      return await this.Model.findOne({ email })
-    } catch(err) {
+      return _id ? await this.Model.findById(_id) : await this.Model.findOne({ email })
+    } catch (err) {
       throw Error(err.message)
     }
   }
@@ -33,7 +33,6 @@ class UserModel {
   private update = () => {}
 
   private delete = () => {}
-
 }
 
 export default new UserModel()

@@ -15,7 +15,7 @@ class VerificationModel {
 
   public create = async (user: String, email: String) => {
     try {
-      let verificationCode = await this.read(email)
+      let verificationCode = await this.read({ email })
       if (!verificationCode) {
         const code = this.generateCode()
         verificationCode = new this.Model({ code, email, user })
@@ -23,22 +23,27 @@ class VerificationModel {
       }
       return verificationCode
     } catch(err) {
-      console.log(err)
       throw Error(err.message)
     }
   }
 
-  private read = async (email: String) => {
+  private read = async ({_id, email}) => {
     try {
-      return await this.Model.findOne({ email })
+      return _id ? await this.Model.findById(_id) : await this.Model.findOne({ email })
     } catch(err) {
       throw Error(err.message)
     }
   }
 
-  private update = () => {}
+  private update = async () => {}
 
-  private delete = () => {}
+  private delete = async (_id: String) => {
+    try {
+      return await this.Model.findByIdAndDelete(_id)
+    } catch(err) {
+      throw Error(err.message)
+    }
+  }
 
 }
 
