@@ -11,7 +11,8 @@ class Router {
   }
 
   private setRoutes() {
-    this.router.post('/user/create', User.create)
+    this.router.post('/user/signin', User.signin)
+    // this.router.post('/user/verify', User.verify)
 
     this.router.get('/community/read', Community.read)
     this.router.get('/community/stream', Community.stream)

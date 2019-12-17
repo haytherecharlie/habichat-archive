@@ -5,7 +5,7 @@ import UserModel from 'services/Mongo/UserModel'
 import VerificationModel from 'services/Mongo/VerificationModel'
 
 class User {
-  public create = async (req: Request, res: Response) => {
+  public signin = async (req: Request, res: Response) => {
     try {
       const email = path(['email'])(req.body)
       const user = await UserModel.create(email)
