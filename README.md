@@ -1,6 +1,7 @@
 ---
 [![alt text](https://github.com/haytherecharlie/habichat-firebase/blob/master/design/images/github-banner.jpg "Logo Title Text 1")](https://habi.chat)
 
+#### An archive of habichat code and design.
 ---
 
 ### TABLE OF CONTENTS
@@ -16,5 +17,5 @@
 ### Clone Repo.
 
 ```
-git clone git@github.com:haytherecharlie/habichat-firebase.git
+git clone git@github.com:haytherecharlie/habichat-archive.git
 ```
