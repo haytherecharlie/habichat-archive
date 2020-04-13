@@ -1,0 +1,12 @@
+node_modules/**/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+config/
+build/
+.DS_Store
+.env
+

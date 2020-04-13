@@ -1,0 +1,34 @@
+{
+  "profile": {
+    "UID": "tfNzeMLyMGoLhxIzjrCb",
+    "firstname": "Charlie",
+    "lastname": "Hay",
+    "address": "35 Mariner Terrace",
+    "city": "Toronto",
+    "picture": "https://scontent.fyto1-1.fna.fbcdn.net/v/t1.0-1/p320x320/30724746_10155818505093303_7356398509752320_n.jpg?_nc_cat=109&_nc_oc=AQng5n3D56mMLvzcmcvl5g_XzPyawBn5ZiZFAwzXrAtc-ugj-eDGPLL7_TYX3B8xtg3fScDe_ynALX5CT6RCOs0q&_nc_ht=scontent.fyto1-1.fna&oh=56d2d2fb122c3588643794fb387ccd52&oe=5DC33C41",
+    "interests": ["Travel", "Outdoors", "Hiking", "Food", "Music", "Books", "Movies"]
+  },
+  "neighbors": {
+    "tfNzeMLyMGoLhxIzjrCb": {
+      "UID": "tfNzeMLyMGoLhxIzjrCb",
+      "firstname": "Charlie",
+      "lastname": "Hay",
+      "address": "35 Mariner Terrace",
+      "city": "Toronto",
+      "picture": "https://scontent.fyto1-1.fna.fbcdn.net/v/t1.0-1/p320x320/30724746_10155818505093303_7356398509752320_n.jpg?_nc_cat=109&_nc_oc=AQng5n3D56mMLvzcmcvl5g_XzPyawBn5ZiZFAwzXrAtc-ugj-eDGPLL7_TYX3B8xtg3fScDe_ynALX5CT6RCOs0q&_nc_ht=scontent.fyto1-1.fna&oh=56d2d2fb122c3588643794fb387ccd52&oe=5DC33C41",
+      "interests": ["Travel", "Outdoors", "Hiking", "Food", "Music", "Books", "Movies"]
+    }
+  },
+  "posts": {
+    "C5x24d905HGDQjStilYW": {
+      "timestamp": "1561755658665",
+      "authorUID": "tfNzeMLyMGoLhxIzjrCb",
+      "type": "text",
+      "content": {
+        "body": "Hi, I'm moving from San Francisco to downtown, anybody wanna help me move my things into my new apartment? I can offer free beer in ..."
+      },
+      "comments": [],
+      "seenBy": []
+    }
+  }
+}
