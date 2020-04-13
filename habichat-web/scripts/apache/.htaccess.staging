@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /
+
+#REACT
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+#PROTECTED DIRECTORY
+AuthType Basic
+AuthName "staging"
+AuthUserFile "/home/l781hsw5zn41/.htpasswds/public_html/staging/passwd"
+require valid-user

@@ -1,0 +1,8 @@
+#REWRITE APACHE RULES
+RewriteEngine on
+RewriteBase /
+
+#USE PRODUCTION FOLDER
+RewriteCond %{HTTP_HOST} ^(?:www\.)?habi\.chat$
+RewriteCond %{REQUEST_URI} !^/production/
+RewriteRule (.*) /production/$1

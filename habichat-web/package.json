@@ -1,0 +1,83 @@
+{
+  "name": "habichat-web",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://habi.chat",
+  "scripts": {
+    "build": "REACT_APP_ENV=production react-scripts build",
+    "commit-config": "source ./scripts/bash/commit-config.sh",
+    "deploy-production": "source ./scripts/bash/deploy-production.sh",
+    "deploy-staging": "source ./scripts/bash/deploy-staging.sh",
+    "dev": "REACT_APP_ENV=development react-scripts start",
+    "lint": "eslint ./src",
+    "setup-mac": "source ./scripts/bash/setup-mac.sh",
+    "sitemap": "babel-node ./scripts/javascript/sitemap-generator.js",
+    "sync": "source ./scripts/bash/git-sync.sh",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "precommit": {
+    "silent": true,
+    "run": "commit-config"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-router-sitemap": "^1.2.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^5.10.0",
+    "remote-redux-devtools": "^0.5.16",
+    "styled-components": "^5.0.0-beta.8"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ]
+  },
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  },
+  "coverageReporters": [
+    "text"
+  ],
+  "snapshotSerializers": [],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
