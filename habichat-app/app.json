@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "habichat",
+    "slug": "habichat",
+    "description": "Chat with your neighbors",
+    "owner": "haytherecharlie",
+    "privacy": "unlisted",
+    "sdkVersion": "34.0.0",
+    "version": "0.1.0",
+    "platforms": ["ios", "android"],
+    "githubUrl": "https://github.com/habichat/habichat-app",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "androidStatusBar": {
+      "barStyle": "dark-content"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false
+    },
+    "packagerOpts": {
+      "sourceExts": ["js", "json", "jsx"],
+      "config": "metro.config.js"
+    }
+  },
+  "hooks": {
+    "postPublish": [
+      {
+        "file": "sentry-expo/upload-sourcemaps",
+        "config": {
+          "organization": "habichat",
+          "project": "habichat",
+          "authToken": "your auth token here"
+        }
+      }
+    ]
+  }
+}

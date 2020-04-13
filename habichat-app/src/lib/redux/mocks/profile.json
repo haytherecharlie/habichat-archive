@@ -1,0 +1,21 @@
+{
+  "_id": "ObjectId('5d2be96cf6d5b0b42ee6d61c')",
+  "address": {
+    "unit": "2602",
+    "number": "35",
+    "street": "Mariner Terrace",
+    "city": "Toronto",
+    "region": "Ontario",
+    "country": "Canada",
+    "postcode": "M5V3V9"
+  },
+  "firstname": "Charlie",
+  "lastname": "Hay",
+  "picture": "https://avatars0.githubusercontent.com/u/10199594?s=460&v=4",
+  "interests": ["fishing", "hiking", "hunting"],
+  "community": "35 Mariner Terrace Toronto Ontario Canada",
+  "userCreatedAt": "1563158892045",
+  "userLastLogin": "1563158892045",
+  "email": "charlie.hay@outlook.com",
+  "__v": 0
+}

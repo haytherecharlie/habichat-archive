@@ -1,0 +1,189 @@
+{
+  "_id": "ObjectId('5d2be93ff6d5b0b42ee6d61a')",
+  "neighbors": [
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('111')",
+      "firstname": "Mandy",
+      "lastname": "Jacobs",
+      "picture": "https://pbs.twimg.com/profile_images/424951905727434752/fFEPIxsB.jpeg"
+    },
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('222')",
+      "firstname": "Ning",
+      "lastname": "Jiang",
+      "picture": "https://pbs.twimg.com/profile_images/2762718007/863eddc75bec06bc084252e50c5043c7.jpeg"
+    },
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('333')",
+      "firstname": "Margot",
+      "lastname": "Xu",
+      "picture": "https://66.media.tumblr.com/avatar_b9cc047d55ba_128.png"
+    },
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('444')",
+      "firstname": "Rebecca",
+      "lastname": "Jordan",
+      "picture": "https://s3.amazonaws.com/files.flipsnack.net/users/9CAEFAFD75E/images/profile"
+    },
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('555')",
+      "firstname": "Paul",
+      "lastname": "Akermann",
+      "picture": "https://66.media.tumblr.com/avatar_152b4110cc7a_128.png"
+    },
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('666')",
+      "firstname": "Brad",
+      "lastname": "Kessel",
+      "picture": "https://66.media.tumblr.com/avatar_2c4b820ec474_128.png"
+    },
+    {
+      "interests": ["fishing", "hiking", "hunting"],
+      "_id": "ObjectId('777')",
+      "firstname": "Steven",
+      "lastname": "Hill",
+      "picture": "https://secure.gravatar.com/avatar/3717c5eb8fd12d3a04897278310f3a74"
+    }
+  ],
+  "posts": [
+    {
+      "seenBy": ["", "", "", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('333')",
+      "type": "text",
+      "content": {
+        "body": "Hey! I was wondering if anyone is watching the game tonight and wanted to have a party or something?"
+      },
+      "comments": ["", ""]
+    },
+    {
+      "seenBy": ["", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('222')",
+      "type": "text",
+      "content": {
+        "body": "I've been seening this creepy dude walking around outside a lot this week? Should I do something?"
+      },
+      "comments": ["", "", "", "", "", "", ""]
+    },
+    {
+      "seenBy": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('111')",
+      "type": "text",
+      "content": {
+        "body": "So, I'm a dogwalker, and I'm looking to take your little pups out for a walk during the day time, send me a message if you want!"
+      },
+      "comments": ["", "", "", "", "", ""]
+    },
+    {
+      "seenBy": ["", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('777')",
+      "type": "text",
+      "content": {
+        "body": "Selling two tickets to pitbull this evening, it's gonna be lit. $500"
+      },
+      "comments": ["", "", "", "", "", ""]
+    },
+    {
+      "seenBy": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('666')",
+      "type": "text",
+      "content": {
+        "body": "Hey, I'm new to the city, and I don't know who's good for internet. Any suggestions?"
+      },
+      "comments": ["", "", "", "", "", "", "", ""]
+    },
+    {
+      "seenBy": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('555')",
+      "type": "text",
+      "content": {
+        "body": "Anyone need a parking space? willing to offer for a good price."
+      },
+      "comments": ["", "", "", "", "", "", ""]
+    },
+    {
+      "seenBy": ["", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('111')",
+      "type": "text",
+      "content": {
+        "body": "The convience store downstairs closes at 8pm on Sunday's right?"
+      },
+      "comments": ["", "", "", "", "", "", "", "", ""]
+    },
+    {
+      "seenBy": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "_id": "ObjectId('5d2be97af6d5b0b42ee6d61d')",
+      "createdAt": 1563158906810.0,
+      "updatedAt": 1563158906810.0,
+      "author": "ObjectId('444')",
+      "type": "text",
+      "content": {
+        "body": "Looking to start a basketball team to play on Wednesdays - hit me up if you're interested."
+      },
+      "comments": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    }
+  ],
+  "address": {
+    "coordinates": [43.6396733, -79.3942775],
+    "_id": "ObjectId('777')",
+    "name": "35 Mariner Terrace Toronto Ontario Canada",
+    "number": "35",
+    "street": "Mariner Terrace",
+    "city": "Toronto",
+    "region": "Ontario",
+    "country": "Canada",
+    "postcode": "M5V3V9",
+    "passphrase": "toronto35"
+  },
+  "__v": 0
+}

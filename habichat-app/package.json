@@ -1,0 +1,39 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "commit-config": "source ./scripts/bash/commit-config.sh",
+    "dev": "expo start --clear --lan --dev",
+    "eject": "expo eject",
+    "setup-mac": "source ./scripts/bash/setup-mac.sh",
+    "update-packages": "ncu -u"
+  },
+  "precommit": {
+    "silent": true,
+    "run": "commit-config"
+  },
+  "dependencies": {
+    "expo": "^34.0.4",
+    "expo-av": "^6.0.0",
+    "expo-font": "^6.0.1",
+    "react": "16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-gesture-handler": "^1.3.0",
+    "react-native-svg": "^9.5.1",
+    "react-native-swiper": "^1.5.14",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^3.11.1",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-persist": "^5.10.0",
+    "sentry-expo": "^1.13.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.2.0",
+    "expo-cli": "^3.0.9",
+    "npm-check-updates": "^3.1.20",
+    "pre-commit": "^1.2.2",
+    "remote-redux-devtools": "^0.5.16"
+  }
+}
